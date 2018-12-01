@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120923623-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-120923623-1');
+</script>
+
+        <title>Localização: PEIXE</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+        <script src="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.css" />
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    </head>
+    <body>
+      
+        <div class="w3-container w3-center w3-teal">
+            <h2 id="prod_name">PEIXE</h2>
+        </div>
+        
+            <div class="w3-card-4" style="width:100%">
+                <img id="first_image" src="" alt="Localização do Peixe" style="width:100%">
+                <div class="w3-container w3-center w3-teal">
+                    <h5 id="first_price">Preço !!!</h5>
+                    <h6 id="first_price_date">Actualização do Preço</h6>
+                </div>
+            </div>
+        
+       
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAgkLaQTz2rkoEgi4pBf5X5QXxBgqwRFos",
+    authDomain: "cestbaselista.firebaseapp.com",
+    databaseURL: "https://cestbaselista.firebaseio.com",
+    projectId: "cestbaselista",
+    storageBucket: "cestbaselista.appspot.com",
+    messagingSenderId: "679151408753"
+  };
+  firebase.initializeApp(config);
+  
+  
+  
+  //Add your code here...!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  var firstProdName=document.getElementById('prod_name');
+  var firstPrice=document.getElementById('first_price');
+  var firstPriceDate=document.getElementById('first_price_date');
+  var firstPriceMap=document.getElementById('first_image');
+  
+  var dbRefProdName=firebase.database().ref().child('2018-06-09').child('Peixe').child('mName');
+  var dbRefPrice=firebase.database().ref().child('2018-06-09').child('Peixe').child('mPreco');
+  var dbRefPriceDate=firebase.database().ref().child('2018-06-09').child('Peixe').child('mDate');
+  var dbRefPriceMap=firebase.database().ref().child('2018-06-09').child('Peixe').child('mLocalMap');
+  
+  dbRefProdName.on('value', snap => firstProdName.innerText = snap.val());
+  dbRefPrice.on('value', snap => firstPrice.innerText = snap.val());
+  dbRefPriceDate.on('value', snap => firstPriceDate.innerText = snap.val());
+  dbRefPriceMap.on('value', snap => firstPriceMap.src = snap.val());
+</script>
+        
+    </body>
+</html>

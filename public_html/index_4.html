@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120923623-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-120923623-1');
+</script>
+<!-- AdSense code sesseion
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8270450258098276",
+    enable_page_level_ads: true
+  });
+</script>
+End of AdSense code Session -->
+
+        <title>Kitandeira-Digital</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+        <link rel="stylesheet" href="w3.css">
+        <link rel="stylesheet" type="text/css" href="KD_css.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
+        
+     
+    </head>
+    <body>
+         <script>
+            window.fbAsyncInit = function() {
+                FB.init({
+                    appId            : '245237032697050',
+                    autoLogAppEvents : true,
+                    xfbml            : true,
+                    version          : 'v3.0'
+                });
+            };
+
+            (function(d, s, id){
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement(s); js.id = id;
+                js.src = "https://connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+        
+        <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar" onclick="get_userInfo()">
+            <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+            <ul>
+                <li><a href="ajuda.html#manual" class="w3-bar-item w3-button w3-text-blue"><strong>Manual de Utilização - Ajuda !</strong> </a></li>
+                <li><a href="ajuda.html#intro" class="w3-bar-item w3-button w3-text-blue"><strong>Introdução ao sistema: Cesta Básica Angola</strong></a></li>
+                <li><a href="ajuda.html#perfil" class="w3-bar-item w3-button w3-text-blue"><strong>Perfil de Cliente</strong></a></li>
+                <li><a href="ajuda.html#manut" class="w3-bar-item w3-button w3-text-blue"><strong>Manutenção / Alteração do Perfil de Cliente</strong></a></li>
+                <li><a href="ajuda.html#regist" class="w3-bar-item w3-button w3-text-blue"><strong>Registo de Cliente</strong></a></li>
+                <li><a href="ajuda.html#prec" class="w3-bar-item w3-button w3-text-blue"><strong>Taxa de Serviço + Preçário</strong></a></li>
+                <li><a href="ajuda.html#encomend" class="w3-bar-item w3-button w3-text-blue"><strong>Encomendar Produtos</strong></a></li>
+                <li><a href="ajuda.html#fidel" class="w3-bar-item w3-button w3-text-blue"><strong>Fidelização de Clientes</strong></a></li>
+                <li><a href="Simulador.html" class="w3-bar-item w3-button w3-text-blue"><strong>Simulador</strong></a></li>
+            </ul>
+        </div>
+
+        
+       
+<!--        <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar" onclick="get_userInfo()">
+            <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+            <label id="saudacao">Bem Vindo: </label><h3 id="user_name">Saudações da Equipa TICNES !!!</h3>
+            
+            <a href="404.html" class="w3-bar-item w3-button">Comprar </a>
+            <a href="https://m.me/ticnes" class="fb-msg-btn" target="_blank">Envie-nos Sugestões <br> ou <br>Informações de novos preços</a>
+            <a href="ajuda.html" class="w3-bar-item w3-button">Precisa de Ajuda ? </a>
+            <br><h4 id="sign_out" onclick="discon_user()" style="cursor:pointer"><strong>SIGN OUT / Desligar !</strong></h4>
+        </div>-->
+<div id="main">
+       <div class="w3-teal">
+                <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+                <div class="w3-container w3-center">
+                    <h1>Cesta Básica Angola</h1>
+                    <!--<h4>Aqui... Levamos para si</h4>-->
+                    <h1>-</h1>
+                    <h3>OS MELHORES PREÇOS</h3>
+                    <h4>das lojas que bem conhece</h4>
+                    <!--<h4>Estão AQUI...!</h4>-->
+                </div>
+            </div>
+       <div class="w3-container w3-yellow w3-center" style="width:100%">
+           <h6 id="reg" onclick="pos_1_data()" style="cursor:pointer;"><strong><<< Acesso...AQUI !!! >>></strong></h6>
+                <!--<img src="register_today.png" alt="Animated Gif" onclick="pos_1_data()">-->
+        </div>
+        
+</div>       
+        <!-- 1ª Linha --> 
+        <div class="w3-row-padding w3-margin-top" style="width:100%">
+           
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="beer_pouring_03.jpg" onclick="pos_1_data()">
+                <div class="w3-container">
+                    <h5 id="first">Cerveja</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="copo_de_agua.jpg" onclick="pos_2_data()">
+                <div class="w3-container">
+                    <h5 id="second">Água</h5>
+                     <!--<input type="checkbox" style="visibility: hidden">-->
+                     <input type="checkbox" >
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="soja.jpg" onclick="pos_3_data()">
+                <div class="w3-container">
+                    <h5 id="third">Óleo de Soja</h5>
+                </div>
+            </div>
+        </div>
+        
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="palm_oil.jpg" style="width:100%;cursor:pointer;" onclick="pos_4_data()">
+                <div class="w3-container w3-center">
+                    <h5 id="fourth">Óleo de Palma</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- 2ª Linha --> 
+        <div class="w3-row-padding w3-margin-top" style="width:100%" >
+           
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="leite003.jpg" style="width:100%;cursor:pointer;" onclick="pos_5_data()">
+                <div class="w3-container">
+                    <h5 id="fifth">Leite</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="bread.jpg" style="width:100%;cursor:pointer;" onclick="pos_6_data()">
+                <div class="w3-container">
+                    <h5 id="sixth">Pão</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="acucar02.jpg" style="width:100%;cursor:pointer;" onclick="pos_7_data()">
+                <div class="w3-container">
+                    <h5 id="seventh">Açucar</h5>
+                </div>
+            </div>
+        </div>
+        
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="ovos03.jpg" style="width:100%;cursor:pointer;" onclick="pos_8_data()">
+                <div class="w3-container w3-center">
+                    <h5 id="eighth">Ovos</h5>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- 3ª Linha --> 
+        <div class="w3-row-padding w3-margin-top" style="width:100%">
+           
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="wheat_flour.jpg" style="width:100%;cursor:pointer;" onclick="pos_9_data()">
+                <div class="w3-container">
+                    <h5 id="nineth">Farinha de Trigo</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="salt02.jpg" style="width:100%;cursor:pointer;" onclick="pos_10_data()">
+                <div class="w3-container">
+                    <h5 id="tenth">Sal</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="arroz.jpg" style="width:100%;cursor:pointer;" onclick="pos_11_data()">
+                <div class="w3-container">
+                    <h5 id="eleventh">Arroz</h5>
+                </div>
+            </div>
+        </div>
+        
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="massa_alimentar.jpg" style="width:100%;cursor:pointer;" onclick="pos_12_data()">
+                <div class="w3-container w3-center">
+                    <h5 id="twelveth">Massa</h5>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        <!-- 4ª Linha --> 
+        <div class="w3-row-padding w3-margin-top" style="width:100%">
+           
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="feijao.jpg" style="width:100%;cursor:pointer;" onclick="pos_13_data()">
+                <div class="w3-container">
+                    <h5 id="thirteenth">Feijão</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="frozen_whole_chicken_1.jpg" style="width:100%;cursor:pointer;" onclick="pos_14_data()">
+                <div class="w3-container">
+                    <h5 id="fourteenth">Frango</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="fish_selection_02.jpeg" style="width:100%;cursor:pointer;" onclick="pos_15_data()">
+                <div class="w3-container">
+                    <h5 id="fifteenth">Peixe</h5>
+                </div>
+            </div>
+        </div>
+        
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="carne_seca.jpg" style="width:100%;cursor:pointer;" onclick="pos_16_data()">
+                <div class="w3-container w3-center">
+                    <h5 id="sixteenth">Carne Seca</h5>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        <!-- 5ª Linha --> 
+        <div class="w3-row-padding w3-margin-top" style="width:100%">
+           
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="farinha_de_milho.jpg" style="width:100%;cursor:pointer;" onclick="pos_17_data()">
+                <div class="w3-container">
+                    <h5 id="seventeenth">Fuba de Milho</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="farinha_de_mandioca.jpg" style="width:100%;cursor:pointer;" onclick="pos_18_data()">
+                <div class="w3-container">
+                    <h5 id="eighteenth">Fuba de Mandioca</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="pasta_dentrifica.jpg" style="width:100%;cursor:pointer;" onclick="pos_19_data()">
+                <div class="w3-container">
+                    <h5 id="nineteenth">Pasta de Dente</h5>
+                </div>
+            </div>
+        </div>
+        
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="sabao_em_barra.jpg" style="width:100%;cursor:pointer;" onclick="pos_20_data()">
+                <div class="w3-container w3-center">
+                    <h5 id="twentyth">Sabao em Barra</h5>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="w3-container w3-mobile w3-center" style="width:100%">
+            <footer>
+                <ul>
+                    <li><a href="https://ticnes.com">&#169;2018 TICNES Lda. Todos os Direitos Reservados</a></li>
+                    <li><a href="Política de Privacidade_CBA_PT.html">Privacidade</a></li>
+                    <li><a href="Termos_de_Serviço_CBA.html">Termos e Condições</a></li>
+                    <li><a href="mailto://info@ticnes.com">Contacto</a></li>
+                </ul>
+            </footer>
+        </div>
+        
+      
+
+
+
+<script>
+
+    var _$_c80c=["\x72\x65\x67\x69\x73\x74\x65\x72\x65\x64\x5F\x75\x73\x65\x72\x2E\x68\x74\x6D\x6C","\x6F\x70\x65\x6E"];
+function pos_1_data()
+{
+	window[_$_c80c[1]](_$_c80c[0]);
+}
+function pos_2_data()
+{
+	window[_$_c80c[1]](_$_c80c[0]);
+}
+function pos_3_data()
+{
+	window[_$_c80c[1]](_$_c80c[0]);
+}
+function pos_4_data()
+{
+	window[_$_c80c[1]](_$_c80c[0]);
+}
+function pos_5_data()
+{
+	window[_$_c80c[1]](_$_c80c[0]);
+}
+function pos_6_data()
+{
+	window[_$_c80c[1]](_$_c80c[0]);
+}
+function pos_7_data()
+{
+	window[_$_c80c[1]](_$_c80c[0]);
+}
+function pos_8_data()
+{
+	window[_$_c80c[1]](_$_c80c[0]);
+}
+function pos_9_data()
+{
+	window[_$_c80c[1]](_$_c80c[0]);
+}
+function pos_10_data()
+{
+	window[_$_c80c[1]](_$_c80c[0]);
+}
+function pos_11_data()
+{
+	window[_$_c80c[1]](_$_c80c[0]);
+}
+function pos_12_data()
+{
+	window[_$_c80c[1]](_$_c80c[0]);
+}
+function pos_13_data()
+{
+	window[_$_c80c[1]](_$_c80c[0]);
+}
+function pos_14_data()
+{
+	window[_$_c80c[1]](_$_c80c[0]);
+}
+function pos_15_data()
+{
+	window[_$_c80c[1]](_$_c80c[0]);
+}
+function pos_16_data()
+{
+	window[_$_c80c[1]](_$_c80c[0]);
+}
+function pos_17_data()
+{
+	window[_$_c80c[1]](_$_c80c[0]);
+}
+function pos_18_data()
+{
+	window[_$_c80c[1]](_$_c80c[0]);
+}
+function pos_19_data()
+{
+	window[_$_c80c[1]](_$_c80c[0]);
+}
+function pos_20_data()
+{
+	window[_$_c80c[1]](_$_c80c[0]);
+}
+        </script>
+        
+        
+      <script>
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidebar").style.width = "25%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+</script>   
+    </body>
+</html>

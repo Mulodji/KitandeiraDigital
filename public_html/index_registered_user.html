@@ -1,0 +1,457 @@
+
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Cesta Básica Angola - Cliente Registado</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    </head>
+    <body>
+        <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+            <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+            <a href="#" class="w3-bar-item w3-button">Bem Vindo:...!</a>
+            <a href="#" class="w3-bar-item w3-button">Consultar Saldo</a>
+            <a href="#" class="w3-bar-item w3-button">Comprar Produtos</a>
+            <a href="#" class="w3-bar-item w3-button">Enviar Informação de NOVOS PREÇOS !</a>
+            <a href="#" class="w3-bar-item w3-button">Enviar Sugestões</a>
+        </div>
+
+        <div id="main">
+
+            <div class="w3-teal">
+                <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+                <div class="w3-container w3-center">
+                    <h1>Cesta Básica Angola</h1>
+                    <!--<h4>Aqui... Levamos para si</h4>-->
+                    <h1>-</h1>
+                    <h3>OS MELHORES PREÇOS !!!</h3>
+                    <h4>Estão AQUI...</h4>
+                </div>
+            </div>
+            <!--<img src="copo_de_agua.jpg" alt="Copo de água" style="width:100%">-->
+            
+            
+        </div>
+        <!-- 1ª Linha --> 
+        <div class="w3-row-padding w3-margin-top" style="width:100%">
+           
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="beer_pouring_03.jpg" style="width:100%" onclick="pos_1_data()">
+                <div class="w3-container">
+                    <h5 id="first">Cerveja</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="copo_de_agua.jpg" style="width:100%" onclick="pos_2_data()">
+                <div class="w3-container">
+                    <h5 id="second">Água</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="soja.jpg" style="width:100%" onclick="pos_3_data()">
+                <div class="w3-container">
+                    <h5 id="third">Óleo de Soja</h5>
+                </div>
+            </div>
+        </div>
+        
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="palm_oil.jpg" style="width:100%" onclick="pos_4_data()">
+                <div class="w3-container w3-center">
+                    <h5 id="fourth">Óleo de Palma</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- 2ª Linha --> 
+        <div class="w3-row-padding w3-margin-top" style="width:100%" >
+           
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="leite003.jpg" style="width:100%" onclick="pos_5_data()">
+                <div class="w3-container">
+                    <h5 id="fifth">Leite</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="bread.jpg" style="width:100%" onclick="pos_6_data()">
+                <div class="w3-container">
+                    <h5 id="sixth">Pão</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="acucar02.jpg" style="width:100%" onclick="pos_7_data()">
+                <div class="w3-container">
+                    <h5 id="seventh">Açucar</h5>
+                </div>
+            </div>
+        </div>
+        
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="ovos03.jpg" style="width:100%" onclick="pos_8_data()">
+                <div class="w3-container w3-center">
+                    <h5 id="eighth">Ovos</h5>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- 3ª Linha --> 
+        <div class="w3-row-padding w3-margin-top" style="width:100%">
+           
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="wheat_flour.jpg" style="width:100%" onclick="pos_9_data()">
+                <div class="w3-container">
+                    <h5 id="nineth">Farinha de Trigo</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="salt02.jpg" style="width:100%" onclick="pos_10_data()">
+                <div class="w3-container">
+                    <h5 id="tenth">Sal</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="arroz.jpg" style="width:100%" onclick="pos_11_data()">
+                <div class="w3-container">
+                    <h5 id="eleventh">Arroz</h5>
+                </div>
+            </div>
+        </div>
+        
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="massa_alimentar.jpg" style="width:100%" onclick="pos_12_data()">
+                <div class="w3-container w3-center">
+                    <h5 id="twelveth">Massa</h5>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        <!-- 4ª Linha --> 
+        <div class="w3-row-padding w3-margin-top" style="width:100%">
+           
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="feijao.jpg" style="width:100%" onclick="pos_13_data()">
+                <div class="w3-container">
+                    <h5 id="thirteenth">Feijão</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="frozen_whole_chicken_1.jpg" style="width:100%" onclick="pos_14_data()">
+                <div class="w3-container">
+                    <h5 id="fourteenth">Frango</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="fish_selection_02.jpeg" style="width:100%" onclick="pos_15_data()">
+                <div class="w3-container">
+                    <h5 id="fifteenth">Peixe</h5>
+                </div>
+            </div>
+        </div>
+        
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="carne_seca.jpg" style="width:100%" onclick="pos_16_data()">
+                <div class="w3-container w3-center">
+                    <h5 id="sixteenth">Carne Seca</h5>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        <!-- 5ª Linha --> 
+        <div class="w3-row-padding w3-margin-top" style="width:100%">
+           
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="farinha_de_milho.jpg" style="width:100%" onclick="pos_17_data()">
+                <div class="w3-container">
+                    <h5 id="seventeenth">Fuba de Milho</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="farinha_de_mandioca.jpg" style="width:100%" onclick="pos_18_data()">
+                <div class="w3-container">
+                    <h5 id="eighteenth">Fuba de Mandioca</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="pasta_dentrifica.jpg" style="width:100%" onclick="pos_19_data()">
+                <div class="w3-container">
+                    <h5 id="nineteenth">Pasta de Dente</h5>
+                </div>
+            </div>
+        </div>
+        
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="sabao_em_barra.jpg" style="width:100%" onclick="pos_20_data()">
+                <div class="w3-container w3-center">
+                    <h5 id="twentyth">Sabao em Barra</h5>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+         <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAgkLaQTz2rkoEgi4pBf5X5QXxBgqwRFos",
+    authDomain: "cestbaselista.firebaseapp.com",
+    databaseURL: "https://cestbaselista.firebaseio.com",
+    projectId: "cestbaselista",
+    storageBucket: "cestbaselista.appspot.com",
+    messagingSenderId: "679151408753"
+  };
+  firebase.initializeApp(config);
+  
+  //Add your code here...!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  // 1º Element realtime data update
+  var firstPrice=document.getElementById('first');
+  var dbRef1=firebase.database().ref().child('2018-06-09').child('Cerveja').child('mPreco');
+  dbRef1.on('value', snap => firstPrice.innerText = snap.val());
+  
+  // 2º Element realtime data update
+  var secondPrice=document.getElementById('second');
+  var dbRef2=firebase.database().ref().child('2018-06-09').child('Agua').child('mPreco');
+  dbRef2.on('value', snap => secondPrice.innerText = snap.val());
+  
+  // 3º Element realtime data update
+  var thirdPrice=document.getElementById('third');
+  var dbRef3=firebase.database().ref().child('2018-06-09').child('Oleo de Soja').child('mPreco');
+  dbRef3.on('value', snap => thirdPrice.innerText = snap.val());
+  
+  // 4º Element realtime data update
+  var fourthPrice=document.getElementById('fourth');
+  var dbRef4=firebase.database().ref().child('2018-06-09').child('Oleo de Palma').child('mPreco');
+  dbRef4.on('value', snap => fourthPrice.innerText = snap.val());
+  
+  // 5º Element realtime data update
+  var fifthPrice=document.getElementById('fifth');
+  var dbRef5=firebase.database().ref().child('2018-06-09').child('Leite').child('mPreco');
+  dbRef5.on('value', snap => fifthPrice.innerText = snap.val());
+  
+  // 6º Element realtime data update
+  var sixthPrice=document.getElementById('sixth');
+  var dbRef6=firebase.database().ref().child('2018-06-09').child('Pao').child('mPreco');
+  dbRef6.on('value', snap => sixthPrice.innerText = snap.val());
+  
+  // 7º Element realtime data update
+  var seventhPrice=document.getElementById('seventh');
+  var dbRef7=firebase.database().ref().child('2018-06-09').child('Acucar').child('mPreco');
+  dbRef7.on('value', snap => seventhPrice.innerText = snap.val());
+  
+  // 8º Element realtime data update
+  var eighthPrice=document.getElementById('eighth');
+  var dbRef8=firebase.database().ref().child('2018-06-09').child('Ovo').child('mPreco');
+  dbRef8.on('value', snap => eighthPrice.innerText = snap.val());
+  
+  // 9º Element realtime data update
+  var ninethPrice=document.getElementById('nineth');
+  var dbRef9=firebase.database().ref().child('2018-06-09').child('Farinha de Trigo').child('mPreco');
+  dbRef9.on('value', snap => ninethPrice.innerText = snap.val());
+  
+  // 10º Element realtime data update
+  var tenthPrice=document.getElementById('tenth');
+  var dbRef10=firebase.database().ref().child('2018-06-09').child('Sal').child('mPreco');
+  dbRef10.on('value', snap => tenthPrice.innerText = snap.val());
+  
+  // 11º Element realtime data update
+  var eleventhPrice=document.getElementById('eleventh');
+  var dbRef11=firebase.database().ref().child('2018-06-09').child('Arroz').child('mPreco');
+  dbRef11.on('value', snap => eleventhPrice.innerText = snap.val());
+  
+  // 12º Element realtime data update
+  var twelvethPrice=document.getElementById('twelveth');
+  var dbRef12=firebase.database().ref().child('2018-06-09').child('Massa').child('mPreco');
+  dbRef12.on('value', snap => twelvethPrice.innerText = snap.val());
+  
+  // 13º Element realtime data update
+  var thirteethPrice=document.getElementById('thirteenth');
+  var dbRef13=firebase.database().ref().child('2018-06-09').child('Feijao').child('mPreco');
+  dbRef13.on('value', snap => thirteethPrice.innerText = snap.val());
+  
+  // 14º Element realtime data update
+  var fourteenthPrice=document.getElementById('fourteenth');
+  var dbRef14=firebase.database().ref().child('2018-06-09').child('Frango').child('mPreco');
+  dbRef14.on('value', snap => fourteenthPrice.innerText = snap.val());
+  
+  // 15º Element realtime data update
+  var fifteenthPrice=document.getElementById('fifteenth');
+  var dbRef15=firebase.database().ref().child('2018-06-09').child('Peixe').child('mPreco');
+  dbRef15.on('value', snap => fifteenthPrice.innerText = snap.val());
+  
+  // 16º Element realtime data update
+  var sixteenthPrice=document.getElementById('sixteenth');
+  var dbRef16=firebase.database().ref().child('2018-06-09').child('CarneSeca').child('mPreco');
+  dbRef16.on('value', snap => sixteenthPrice.innerText = snap.val());
+  
+  // 17º Element realtime data update
+  var seventeenthPrice=document.getElementById('seventeenth');
+  var dbRef17=firebase.database().ref().child('2018-06-09').child('FubaMilho').child('mPreco');
+  dbRef17.on('value', snap => seventeenthPrice.innerText = snap.val());
+  
+  // 18º Element realtime data update
+  var eighteenthPrice=document.getElementById('eighteenth');
+  var dbRef18=firebase.database().ref().child('2018-06-09').child('FubaMandioca').child('mPreco');
+  dbRef18.on('value', snap => eighteenthPrice.innerText = snap.val());
+  
+  // 19º Element realtime data update
+  var nineteenthPrice=document.getElementById('nineteenth');
+  var dbRef19=firebase.database().ref().child('2018-06-09').child('PastaDente').child('mPreco');
+  dbRef19.on('value', snap => nineteenthPrice.innerText = snap.val());
+  
+  // 20º Element realtime data update
+  var twentythPrice=document.getElementById('twentyth');
+  var dbRef20=firebase.database().ref().child('2018-06-09').child('SabaoBarra').child('mPreco');
+  dbRef20.on('value', snap => twentythPrice.innerText = snap.val());
+   
+</script>
+
+<script>
+            function pos_1_data(){
+             
+             //window.open("registered_user.html");
+             window.open("pos01_data.html");
+            }
+            function pos_2_data(){
+                
+             window.open("pos02_data.html");
+             //window.open("404.html");
+            }
+            function pos_3_data(){
+            window.open("pos03_data.html");
+            // window.open("404.html");
+            }
+            function pos_4_data(){
+             window.open("pos04_data.html");
+             //window.open("404.html");
+            }
+            function pos_5_data(){
+            window.open("pos05_data.html");
+            // window.open("404.html");
+            }
+            function pos_6_data(){
+           window.open("pos06_data.html");
+           //  window.open("404.html");
+            }
+            function pos_7_data(){
+            window.open("pos07_data.html");
+             //window.open("404.html");
+            }
+            function pos_8_data(){
+            window.open("pos08_data.html");
+             //window.open("404.html");
+            }
+            function pos_9_data(){
+            window.open("pos09_data.html");
+             //window.open("404.html");
+            }
+            function pos_10_data(){
+             window.open("pos10_data.html");
+             //window.open("404.html");
+            }
+            function pos_11_data(){
+            window.open("pos11_data.html");
+             //window.open("404.html");
+            }
+            function pos_12_data(){
+            window.open("pos12_data.html");
+             //window.open("404.html");
+                         }
+            function pos_13_data(){
+            window.open("pos13_data.html");
+             //window.open("404.html");
+            }
+            function pos_14_data(){
+            window.open("pos14_data.html");
+             //window.open("404.html");
+            }
+            function pos_15_data(){
+            window.open("pos15_data.html");
+             //window.open("404.html");
+            }
+            function pos_16_data(){
+            window.open("pos16_data.html");
+             //window.open("404.html");
+            }
+            function pos_17_data(){
+             window.open("pos17_data.html");
+             //window.open("404.html");
+            }
+            function pos_18_data(){
+             window.open("pos18_data.html");
+             
+            }
+            function pos_19_data(){
+             window.open("pos19_data.html");
+             //window.open("404.html");
+            }
+            function pos_20_data(){
+            window.open("pos20_data.html");
+             //window.open("404.html");
+            }
+        </script>
+
+        <script>
+            function w3_open() {
+                document.getElementById("main").style.marginLeft = "25%";
+                document.getElementById("mySidebar").style.width = "25%";
+                document.getElementById("mySidebar").style.display = "block";
+                document.getElementById("openNav").style.display = 'none';
+            }
+            function w3_close() {
+                document.getElementById("main").style.marginLeft = "0%";
+                document.getElementById("mySidebar").style.display = "none";
+                document.getElementById("openNav").style.display = "inline-block";
+            }
+        </script>
+    </body>
+</html>

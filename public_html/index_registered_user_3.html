@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120923623-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-120923623-1');
+</script>
+
+        <title>Cesta Básica Angola - Cliente Registado</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="KD_css.css">
+         <link rel="stylesheet" href="w3.css">
+        
+    </head>
+    <body onpageshow="get_userInfo()">
+        <script>
+            window.fbAsyncInit = function() {
+                FB.init({
+                    appId            : '245237032697050',
+                    autoLogAppEvents : true,
+                    xfbml            : true,
+                    version          : 'v3.0'
+                });
+            };
+
+            (function(d, s, id){
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement(s); js.id = id;
+                js.src = "https://connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+        
+        <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar" onclick="get_userInfo()">
+            <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+            <label id="saudacao">Bem Vindo: </label><h3 id="user_name">Saudações da Equipa TICNES !!!</h3>
+            
+            <a href="ajuda.html#encomend" class="w3-bar-item w3-button">Comprar </a>
+            <a href="https://m.me/ticnes" class="fb-msg-btn" target="_blank">Envie-nos Sugestões <br> ou <br>Informações de novos preços</a>
+            <a href="ajuda.html" class="w3-bar-item w3-button">Precisa de Ajuda ? </a>
+            <!--<br><h4 id="sign_out" onclick="discon_user()" style="cursor:pointer"><strong>SIGN OUT / Desligar !</strong></h4>-->
+            <a href="" class="w3-bar-item w3-button" id="sign_out" onclick="discon_user()" style="cursor:pointer">SIGN OUT / Desligar !</a>
+        </div>
+        
+
+        <div id="main">
+
+            <div class="w3-teal">
+                <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+                <!--<div class="w3-container w3-center">
+                    <h1>Cesta Básica Angola</h1>
+                    <!--<h4>Aqui... Levamos para si</h4>-->
+                    <!--<h1>-</h1>
+                    <h3>OS MELHORES PREÇOS</h3>
+                    <h4>Estão AQUI...!</h4>
+                </div>-->
+            </div>
+            <!--<img src="copo_de_agua.jpg" alt="Copo de água" style="width:100%">-->
+           <!-- <div class="fb-messengermessageus" 
+                 messenger_app_id="245237032697050" 
+                page_id="1850540298509539"
+                color="blue"
+                size="standard">
+            </div>-->
+            
+        </div>
+        <!-- 1ª Linha --> 
+        <div class="w3-row-padding w3-margin-top" style="width:100%">
+           
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="beer_pouring_03.jpg" style="width:100%" onclick="pos_1_data()">
+                <div class="w3-container">
+                    <h5 id="first">Cerveja</h5>
+                    <!--<input type="button" onclick="alert('Hello World!')" value="?">-->
+                    <input type="checkbox" style=visibility: hidden>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="copo_de_agua.jpg" style="width:100%" onclick="pos_2_data()">
+                <div class="w3-container">
+                    <h5 id="second">Água</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="soja.jpg" style="width:100%" onclick="pos_3_data()">
+                <div class="w3-container">
+                    <h5 id="third">Óleo de Soja</h5>
+                </div>
+            </div>
+        </div>
+        
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="palm_oil.jpg" style="width:100%" onclick="pos_4_data()">
+                <div class="w3-container w3-center">
+                    <h5 id="fourth">Óleo de Palma</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- 2ª Linha --> 
+        <div class="w3-row-padding w3-margin-top" style="width:100%" >
+           
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="leite003.jpg" style="width:100%" onclick="pos_5_data()">
+                <div class="w3-container">
+                    <h5 id="fifth">Leite</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="bread.jpg" style="width:100%" onclick="pos_6_data()">
+                <div class="w3-container">
+                    <h5 id="sixth">Pão</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="acucar02.jpg" style="width:100%" onclick="pos_7_data()">
+                <div class="w3-container">
+                    <h5 id="seventh">Açucar</h5>
+                </div>
+            </div>
+        </div>
+        
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="ovos03.jpg" style="width:100%" onclick="pos_8_data()">
+                <div class="w3-container w3-center">
+                    <h5 id="eighth">Ovos</h5>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- 3ª Linha --> 
+        <div class="w3-row-padding w3-margin-top" style="width:100%">
+           
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="wheat_flour.jpg" style="width:100%" onclick="pos_9_data()">
+                <div class="w3-container">
+                    <h5 id="nineth">Farinha de Trigo</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="salt02.jpg" style="width:100%" onclick="pos_10_data()">
+                <div class="w3-container">
+                    <h5 id="tenth">Sal</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="arroz.jpg" style="width:100%" onclick="pos_11_data()">
+                <div class="w3-container">
+                    <h5 id="eleventh">Arroz</h5>
+                </div>
+            </div>
+        </div>
+        
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="massa_alimentar.jpg" style="width:100%" onclick="pos_12_data()">
+                <div class="w3-container w3-center">
+                    <h5 id="twelveth">Massa</h5>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        <!-- 4ª Linha --> 
+        <div class="w3-row-padding w3-margin-top" style="width:100%">
+           
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="feijao.jpg" style="width:100%" onclick="pos_13_data()">
+                <div class="w3-container">
+                    <h5 id="thirteenth">Feijão</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="frozen_whole_chicken_1.jpg" style="width:100%" onclick="pos_14_data()">
+                <div class="w3-container">
+                    <h5 id="fourteenth">Frango</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="fish_selection_02.jpeg" style="width:100%" onclick="pos_15_data()">
+                <div class="w3-container">
+                    <h5 id="fifteenth">Peixe</h5>
+                </div>
+            </div>
+        </div>
+        
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="carne_seca.jpg" style="width:100%" onclick="pos_16_data()">
+                <div class="w3-container w3-center">
+                    <h5 id="sixteenth">Carne Seca</h5>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        <!-- 5ª Linha --> 
+        <div class="w3-row-padding w3-margin-top" style="width:100%">
+           
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="farinha_de_milho.jpg" style="width:100%" onclick="pos_17_data()">
+                <div class="w3-container">
+                    <h5 id="seventeenth">Fuba de Milho</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="farinha_de_mandioca.jpg" style="width:100%" onclick="pos_18_data()">
+                <div class="w3-container">
+                    <h5 id="eighteenth">Fuba de Mandioca</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="pasta_dentrifica.jpg" style="width:100%" onclick="pos_19_data()">
+                <div class="w3-container">
+                    <h5 id="nineteenth">Pasta de Dente</h5>
+                </div>
+            </div>
+        </div>
+        
+        <div class="w3-quarter">
+            <div class="w3-card-4">
+                <img src="sabao_em_barra.jpg" style="width:100%" onclick="pos_20_data()">
+                <div class="w3-container w3-center">
+                    <h5 id="twentyth">Sabao em Barra</h5>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="w3-container w3-mobile w3-center" style="width:100%">
+            <footer>
+                <ul>
+                    <li><a href="https://ticnes.com">&#169;2018 TICNES Lda. Todos os Direitos Reservados</a></li>
+                    <li><a href="Privacy_Policy_CBA_PT.html">Privacidade</a></li>
+                    <li><a href="Termos_de_Serviço_CBA.html">Termos e Condições</a></li>
+                    <li><a href="mailto://info@ticnes.com">Contacto</a></li>
+                </ul>
+            </footer>
+        </div>
+
+
+         <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<script>
+ var _$_6cbc=["\x41\x49\x7A\x61\x53\x79\x41\x67\x6B\x4C\x61\x51\x54\x7A\x32\x72\x6B\x6F\x45\x67\x69\x34\x70\x42\x66\x35\x58\x35\x51\x58\x78\x42\x67\x71\x77\x52\x46\x6F\x73","\x63\x65\x73\x74\x62\x61\x73\x65\x6C\x69\x73\x74\x61\x2E\x66\x69\x72\x65\x62\x61\x73\x65\x61\x70\x70\x2E\x63\x6F\x6D","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x63\x65\x73\x74\x62\x61\x73\x65\x6C\x69\x73\x74\x61\x2E\x66\x69\x72\x65\x62\x61\x73\x65\x69\x6F\x2E\x63\x6F\x6D","\x63\x65\x73\x74\x62\x61\x73\x65\x6C\x69\x73\x74\x61","\x63\x65\x73\x74\x62\x61\x73\x65\x6C\x69\x73\x74\x61\x2E\x61\x70\x70\x73\x70\x6F\x74\x2E\x63\x6F\x6D","\x36\x37\x39\x31\x35\x31\x34\x30\x38\x37\x35\x33","\x69\x6E\x69\x74\x69\x61\x6C\x69\x7A\x65\x41\x70\x70","\x66\x69\x72\x73\x74","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x6D\x50\x72\x65\x63\x6F","\x63\x68\x69\x6C\x64","\x43\x65\x72\x76\x65\x6A\x61","\x32\x30\x31\x38\x2D\x30\x36\x2D\x30\x39","\x72\x65\x66","\x64\x61\x74\x61\x62\x61\x73\x65","\x76\x61\x6C\x75\x65","\x69\x6E\x6E\x65\x72\x54\x65\x78\x74","\x76\x61\x6C","\x6F\x6E","\x73\x65\x63\x6F\x6E\x64","\x41\x67\x75\x61","\x74\x68\x69\x72\x64","\x4F\x6C\x65\x6F\x20\x64\x65\x20\x53\x6F\x6A\x61","\x66\x6F\x75\x72\x74\x68","\x4F\x6C\x65\x6F\x20\x64\x65\x20\x50\x61\x6C\x6D\x61","\x66\x69\x66\x74\x68","\x4C\x65\x69\x74\x65","\x73\x69\x78\x74\x68","\x50\x61\x6F","\x73\x65\x76\x65\x6E\x74\x68","\x41\x63\x75\x63\x61\x72","\x65\x69\x67\x68\x74\x68","\x4F\x76\x6F","\x6E\x69\x6E\x65\x74\x68","\x46\x61\x72\x69\x6E\x68\x61\x20\x64\x65\x20\x54\x72\x69\x67\x6F","\x74\x65\x6E\x74\x68","\x53\x61\x6C","\x65\x6C\x65\x76\x65\x6E\x74\x68","\x41\x72\x72\x6F\x7A","\x74\x77\x65\x6C\x76\x65\x74\x68","\x4D\x61\x73\x73\x61","\x74\x68\x69\x72\x74\x65\x65\x6E\x74\x68","\x46\x65\x69\x6A\x61\x6F","\x66\x6F\x75\x72\x74\x65\x65\x6E\x74\x68","\x46\x72\x61\x6E\x67\x6F","\x66\x69\x66\x74\x65\x65\x6E\x74\x68","\x50\x65\x69\x78\x65","\x73\x69\x78\x74\x65\x65\x6E\x74\x68","\x43\x61\x72\x6E\x65\x53\x65\x63\x61","\x73\x65\x76\x65\x6E\x74\x65\x65\x6E\x74\x68","\x46\x75\x62\x61\x4D\x69\x6C\x68\x6F","\x65\x69\x67\x68\x74\x65\x65\x6E\x74\x68","\x46\x75\x62\x61\x4D\x61\x6E\x64\x69\x6F\x63\x61","\x6E\x69\x6E\x65\x74\x65\x65\x6E\x74\x68","\x50\x61\x73\x74\x61\x44\x65\x6E\x74\x65","\x74\x77\x65\x6E\x74\x79\x74\x68","\x53\x61\x62\x61\x6F\x42\x61\x72\x72\x61"];
+var config={apiKey:_$_6cbc[0],authDomain:_$_6cbc[1],databaseURL:_$_6cbc[2],projectId:_$_6cbc[3],storageBucket:_$_6cbc[4],messagingSenderId:_$_6cbc[5]};//1
+firebase[_$_6cbc[6]](config);var firstPrice=document[_$_6cbc[8]](_$_6cbc[7]);//14
+var dbRef1=firebase[_$_6cbc[14]]()[_$_6cbc[13]]()[_$_6cbc[10]](_$_6cbc[12])[_$_6cbc[10]](_$_6cbc[11])[_$_6cbc[10]](_$_6cbc[9]);//15
+dbRef1[_$_6cbc[18]](_$_6cbc[15],(_0x13F84)=>firstPrice[_$_6cbc[16]]= _0x13F84[_$_6cbc[17]]());var secondPrice=document[_$_6cbc[8]](_$_6cbc[19]);//19
+var dbRef2=firebase[_$_6cbc[14]]()[_$_6cbc[13]]()[_$_6cbc[10]](_$_6cbc[12])[_$_6cbc[10]](_$_6cbc[20])[_$_6cbc[10]](_$_6cbc[9]);//20
+dbRef2[_$_6cbc[18]](_$_6cbc[15],(_0x13F84)=>secondPrice[_$_6cbc[16]]= _0x13F84[_$_6cbc[17]]());var thirdPrice=document[_$_6cbc[8]](_$_6cbc[21]);//24
+var dbRef3=firebase[_$_6cbc[14]]()[_$_6cbc[13]]()[_$_6cbc[10]](_$_6cbc[12])[_$_6cbc[10]](_$_6cbc[22])[_$_6cbc[10]](_$_6cbc[9]);//25
+dbRef3[_$_6cbc[18]](_$_6cbc[15],(_0x13F84)=>thirdPrice[_$_6cbc[16]]= _0x13F84[_$_6cbc[17]]());var fourthPrice=document[_$_6cbc[8]](_$_6cbc[23]);//29
+var dbRef4=firebase[_$_6cbc[14]]()[_$_6cbc[13]]()[_$_6cbc[10]](_$_6cbc[12])[_$_6cbc[10]](_$_6cbc[24])[_$_6cbc[10]](_$_6cbc[9]);//30
+dbRef4[_$_6cbc[18]](_$_6cbc[15],(_0x13F84)=>fourthPrice[_$_6cbc[16]]= _0x13F84[_$_6cbc[17]]());var fifthPrice=document[_$_6cbc[8]](_$_6cbc[25]);//34
+var dbRef5=firebase[_$_6cbc[14]]()[_$_6cbc[13]]()[_$_6cbc[10]](_$_6cbc[12])[_$_6cbc[10]](_$_6cbc[26])[_$_6cbc[10]](_$_6cbc[9]);//35
+dbRef5[_$_6cbc[18]](_$_6cbc[15],(_0x13F84)=>fifthPrice[_$_6cbc[16]]= _0x13F84[_$_6cbc[17]]());var sixthPrice=document[_$_6cbc[8]](_$_6cbc[27]);//39
+var dbRef6=firebase[_$_6cbc[14]]()[_$_6cbc[13]]()[_$_6cbc[10]](_$_6cbc[12])[_$_6cbc[10]](_$_6cbc[28])[_$_6cbc[10]](_$_6cbc[9]);//40
+dbRef6[_$_6cbc[18]](_$_6cbc[15],(_0x13F84)=>sixthPrice[_$_6cbc[16]]= _0x13F84[_$_6cbc[17]]());var seventhPrice=document[_$_6cbc[8]](_$_6cbc[29]);//44
+var dbRef7=firebase[_$_6cbc[14]]()[_$_6cbc[13]]()[_$_6cbc[10]](_$_6cbc[12])[_$_6cbc[10]](_$_6cbc[30])[_$_6cbc[10]](_$_6cbc[9]);//45
+dbRef7[_$_6cbc[18]](_$_6cbc[15],(_0x13F84)=>seventhPrice[_$_6cbc[16]]= _0x13F84[_$_6cbc[17]]());var eighthPrice=document[_$_6cbc[8]](_$_6cbc[31]);//49
+var dbRef8=firebase[_$_6cbc[14]]()[_$_6cbc[13]]()[_$_6cbc[10]](_$_6cbc[12])[_$_6cbc[10]](_$_6cbc[32])[_$_6cbc[10]](_$_6cbc[9]);//50
+dbRef8[_$_6cbc[18]](_$_6cbc[15],(_0x13F84)=>eighthPrice[_$_6cbc[16]]= _0x13F84[_$_6cbc[17]]());var ninethPrice=document[_$_6cbc[8]](_$_6cbc[33]);//54
+var dbRef9=firebase[_$_6cbc[14]]()[_$_6cbc[13]]()[_$_6cbc[10]](_$_6cbc[12])[_$_6cbc[10]](_$_6cbc[34])[_$_6cbc[10]](_$_6cbc[9]);//55
+dbRef9[_$_6cbc[18]](_$_6cbc[15],(_0x13F84)=>ninethPrice[_$_6cbc[16]]= _0x13F84[_$_6cbc[17]]());var tenthPrice=document[_$_6cbc[8]](_$_6cbc[35]);//59
+var dbRef10=firebase[_$_6cbc[14]]()[_$_6cbc[13]]()[_$_6cbc[10]](_$_6cbc[12])[_$_6cbc[10]](_$_6cbc[36])[_$_6cbc[10]](_$_6cbc[9]);//60
+dbRef10[_$_6cbc[18]](_$_6cbc[15],(_0x13F84)=>tenthPrice[_$_6cbc[16]]= _0x13F84[_$_6cbc[17]]());var eleventhPrice=document[_$_6cbc[8]](_$_6cbc[37]);//64
+var dbRef11=firebase[_$_6cbc[14]]()[_$_6cbc[13]]()[_$_6cbc[10]](_$_6cbc[12])[_$_6cbc[10]](_$_6cbc[38])[_$_6cbc[10]](_$_6cbc[9]);//65
+dbRef11[_$_6cbc[18]](_$_6cbc[15],(_0x13F84)=>eleventhPrice[_$_6cbc[16]]= _0x13F84[_$_6cbc[17]]());var twelvethPrice=document[_$_6cbc[8]](_$_6cbc[39]);//69
+var dbRef12=firebase[_$_6cbc[14]]()[_$_6cbc[13]]()[_$_6cbc[10]](_$_6cbc[12])[_$_6cbc[10]](_$_6cbc[40])[_$_6cbc[10]](_$_6cbc[9]);//70
+dbRef12[_$_6cbc[18]](_$_6cbc[15],(_0x13F84)=>twelvethPrice[_$_6cbc[16]]= _0x13F84[_$_6cbc[17]]());var thirteethPrice=document[_$_6cbc[8]](_$_6cbc[41]);//74
+var dbRef13=firebase[_$_6cbc[14]]()[_$_6cbc[13]]()[_$_6cbc[10]](_$_6cbc[12])[_$_6cbc[10]](_$_6cbc[42])[_$_6cbc[10]](_$_6cbc[9]);//75
+dbRef13[_$_6cbc[18]](_$_6cbc[15],(_0x13F84)=>thirteethPrice[_$_6cbc[16]]= _0x13F84[_$_6cbc[17]]());var fourteenthPrice=document[_$_6cbc[8]](_$_6cbc[43]);//79
+var dbRef14=firebase[_$_6cbc[14]]()[_$_6cbc[13]]()[_$_6cbc[10]](_$_6cbc[12])[_$_6cbc[10]](_$_6cbc[44])[_$_6cbc[10]](_$_6cbc[9]);//80
+dbRef14[_$_6cbc[18]](_$_6cbc[15],(_0x13F84)=>fourteenthPrice[_$_6cbc[16]]= _0x13F84[_$_6cbc[17]]());var fifteenthPrice=document[_$_6cbc[8]](_$_6cbc[45]);//84
+var dbRef15=firebase[_$_6cbc[14]]()[_$_6cbc[13]]()[_$_6cbc[10]](_$_6cbc[12])[_$_6cbc[10]](_$_6cbc[46])[_$_6cbc[10]](_$_6cbc[9]);//85
+dbRef15[_$_6cbc[18]](_$_6cbc[15],(_0x13F84)=>fifteenthPrice[_$_6cbc[16]]= _0x13F84[_$_6cbc[17]]());var sixteenthPrice=document[_$_6cbc[8]](_$_6cbc[47]);//89
+var dbRef16=firebase[_$_6cbc[14]]()[_$_6cbc[13]]()[_$_6cbc[10]](_$_6cbc[12])[_$_6cbc[10]](_$_6cbc[48])[_$_6cbc[10]](_$_6cbc[9]);//90
+dbRef16[_$_6cbc[18]](_$_6cbc[15],(_0x13F84)=>sixteenthPrice[_$_6cbc[16]]= _0x13F84[_$_6cbc[17]]());var seventeenthPrice=document[_$_6cbc[8]](_$_6cbc[49]);//94
+var dbRef17=firebase[_$_6cbc[14]]()[_$_6cbc[13]]()[_$_6cbc[10]](_$_6cbc[12])[_$_6cbc[10]](_$_6cbc[50])[_$_6cbc[10]](_$_6cbc[9]);//95
+dbRef17[_$_6cbc[18]](_$_6cbc[15],(_0x13F84)=>seventeenthPrice[_$_6cbc[16]]= _0x13F84[_$_6cbc[17]]());var eighteenthPrice=document[_$_6cbc[8]](_$_6cbc[51]);//99
+var dbRef18=firebase[_$_6cbc[14]]()[_$_6cbc[13]]()[_$_6cbc[10]](_$_6cbc[12])[_$_6cbc[10]](_$_6cbc[52])[_$_6cbc[10]](_$_6cbc[9]);//100
+dbRef18[_$_6cbc[18]](_$_6cbc[15],(_0x13F84)=>eighteenthPrice[_$_6cbc[16]]= _0x13F84[_$_6cbc[17]]());var nineteenthPrice=document[_$_6cbc[8]](_$_6cbc[53]);//104
+var dbRef19=firebase[_$_6cbc[14]]()[_$_6cbc[13]]()[_$_6cbc[10]](_$_6cbc[12])[_$_6cbc[10]](_$_6cbc[54])[_$_6cbc[10]](_$_6cbc[9]);//105
+dbRef19[_$_6cbc[18]](_$_6cbc[15],(_0x13F84)=>nineteenthPrice[_$_6cbc[16]]= _0x13F84[_$_6cbc[17]]());var twentythPrice=document[_$_6cbc[8]](_$_6cbc[55]);//109
+var dbRef20=firebase[_$_6cbc[14]]()[_$_6cbc[13]]()[_$_6cbc[10]](_$_6cbc[12])[_$_6cbc[10]](_$_6cbc[56])[_$_6cbc[10]](_$_6cbc[9]);//110
+dbRef20[_$_6cbc[18]](_$_6cbc[15],(_0x13F84)=>twentythPrice[_$_6cbc[16]]= _0x13F84[_$_6cbc[17]]());
+</script>
+
+<script>
+           var _$_f516=["\x70\x6F\x73\x30\x31\x5F\x64\x61\x74\x61\x2E\x68\x74\x6D\x6C","\x6F\x70\x65\x6E","\x70\x6F\x73\x30\x32\x5F\x64\x61\x74\x61\x2E\x68\x74\x6D\x6C","\x70\x6F\x73\x30\x33\x5F\x64\x61\x74\x61\x2E\x68\x74\x6D\x6C","\x70\x6F\x73\x30\x34\x5F\x64\x61\x74\x61\x2E\x68\x74\x6D\x6C","\x70\x6F\x73\x30\x35\x5F\x64\x61\x74\x61\x2E\x68\x74\x6D\x6C","\x70\x6F\x73\x30\x36\x5F\x64\x61\x74\x61\x2E\x68\x74\x6D\x6C","\x70\x6F\x73\x30\x37\x5F\x64\x61\x74\x61\x2E\x68\x74\x6D\x6C","\x70\x6F\x73\x30\x38\x5F\x64\x61\x74\x61\x2E\x68\x74\x6D\x6C","\x70\x6F\x73\x30\x39\x5F\x64\x61\x74\x61\x2E\x68\x74\x6D\x6C","\x70\x6F\x73\x31\x30\x5F\x64\x61\x74\x61\x2E\x68\x74\x6D\x6C","\x70\x6F\x73\x31\x31\x5F\x64\x61\x74\x61\x2E\x68\x74\x6D\x6C","\x70\x6F\x73\x31\x32\x5F\x64\x61\x74\x61\x2E\x68\x74\x6D\x6C","\x70\x6F\x73\x31\x33\x5F\x64\x61\x74\x61\x2E\x68\x74\x6D\x6C","\x70\x6F\x73\x31\x34\x5F\x64\x61\x74\x61\x2E\x68\x74\x6D\x6C","\x70\x6F\x73\x31\x35\x5F\x64\x61\x74\x61\x2E\x68\x74\x6D\x6C","\x70\x6F\x73\x31\x36\x5F\x64\x61\x74\x61\x2E\x68\x74\x6D\x6C","\x70\x6F\x73\x31\x37\x5F\x64\x61\x74\x61\x2E\x68\x74\x6D\x6C","\x70\x6F\x73\x31\x38\x5F\x64\x61\x74\x61\x2E\x68\x74\x6D\x6C","\x70\x6F\x73\x31\x39\x5F\x64\x61\x74\x61\x2E\x68\x74\x6D\x6C","\x70\x6F\x73\x32\x30\x5F\x64\x61\x74\x61\x2E\x68\x74\x6D\x6C"];
+function pos_1_data()
+{
+	window[_$_f516[1]](_$_f516[0]);
+}
+function pos_2_data()
+{
+	window[_$_f516[1]](_$_f516[2]);
+}
+function pos_3_data()
+{
+	window[_$_f516[1]](_$_f516[3]);
+}
+function pos_4_data()
+{
+	window[_$_f516[1]](_$_f516[4]);
+}
+function pos_5_data()
+{
+	window[_$_f516[1]](_$_f516[5]);
+}
+function pos_6_data()
+{
+	window[_$_f516[1]](_$_f516[6]);
+}
+function pos_7_data()
+{
+	window[_$_f516[1]](_$_f516[7]);
+}
+function pos_8_data()
+{
+	window[_$_f516[1]](_$_f516[8]);
+}
+function pos_9_data()
+{
+	window[_$_f516[1]](_$_f516[9]);
+}
+function pos_10_data()
+{
+	window[_$_f516[1]](_$_f516[10]);
+}
+function pos_11_data()
+{
+	window[_$_f516[1]](_$_f516[11]);
+}
+function pos_12_data()
+{
+	window[_$_f516[1]](_$_f516[12]);
+}
+function pos_13_data()
+{
+	window[_$_f516[1]](_$_f516[13]);
+}
+function pos_14_data()
+{
+	window[_$_f516[1]](_$_f516[14]);
+}
+function pos_15_data()
+{
+	window[_$_f516[1]](_$_f516[15]);
+}
+function pos_16_data()
+{
+	window[_$_f516[1]](_$_f516[16]);
+}
+function pos_17_data()
+{
+	window[_$_f516[1]](_$_f516[17]);
+}
+function pos_18_data()
+{
+	window[_$_f516[1]](_$_f516[18]);
+}
+function pos_19_data()
+{
+	window[_$_f516[1]](_$_f516[19]);
+}
+function pos_20_data()
+{
+	window[_$_f516[1]](_$_f516[20]);
+}
+
+        </script>
+
+        <script>
+           var _$_d251=["\x6D\x61\x72\x67\x69\x6E\x4C\x65\x66\x74","\x73\x74\x79\x6C\x65","\x6D\x61\x69\x6E","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x32\x35\x25","\x77\x69\x64\x74\x68","\x6D\x79\x53\x69\x64\x65\x62\x61\x72","\x64\x69\x73\x70\x6C\x61\x79","\x62\x6C\x6F\x63\x6B","\x6F\x70\x65\x6E\x4E\x61\x76","\x6E\x6F\x6E\x65","\x30\x25","\x69\x6E\x6C\x69\x6E\x65\x2D\x62\x6C\x6F\x63\x6B"];
+function w3_open()
+{
+	document[_$_d251[3]](_$_d251[2])[_$_d251[1]][_$_d251[0]]= _$_d251[4];document[_$_d251[3]](_$_d251[6])[_$_d251[1]][_$_d251[5]]= _$_d251[4];document[_$_d251[3]](_$_d251[6])[_$_d251[1]][_$_d251[7]]= _$_d251[8];document[_$_d251[3]](_$_d251[9])[_$_d251[1]][_$_d251[7]]= _$_d251[10];
+}
+function w3_close()
+{
+	document[_$_d251[3]](_$_d251[2])[_$_d251[1]][_$_d251[0]]= _$_d251[11];document[_$_d251[3]](_$_d251[6])[_$_d251[1]][_$_d251[7]]= _$_d251[10];document[_$_d251[3]](_$_d251[9])[_$_d251[1]][_$_d251[7]]= _$_d251[12];
+}
+
+        </script>
+        
+        
+        <script>
+          
+ 
+  var _$_a1e5=["\x63\x75\x72\x72\x65\x6E\x74\x55\x73\x65\x72","\x61\x75\x74\x68","\x64\x69\x73\x70\x6C\x61\x79\x4E\x61\x6D\x65","\x65\x6D\x61\x69\x6C","\x70\x68\x6F\x74\x6F\x55\x52\x4C","\x65\x6D\x61\x69\x6C\x56\x65\x72\x69\x66\x69\x65\x64","\x75\x69\x64","\x69\x6E\x6E\x65\x72\x54\x65\x78\x74","\x75\x73\x65\x72\x5F\x6E\x61\x6D\x65","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x63\x61\x74\x63\x68","\x69\x6E\x64\x65\x78\x2E\x68\x74\x6D\x6C","\x5F\x73\x65\x6C\x66","","\x6F\x70\x65\x6E","\x74\x68\x65\x6E","\x73\x69\x67\x6E\x4F\x75\x74"];
+function get_userInfo()
+{
+	var _0xE3D1=firebase[_$_a1e5[1]]()[_$_a1e5[0]];//1
+	var _0xE2AB,_0xE1E7,_0xE30D,_0xE36F,_0xE249;//2
+	if(_0xE3D1!== null)
+	{
+		_0xE2AB= _0xE3D1[_$_a1e5[2]];_0xE1E7= _0xE3D1[_$_a1e5[3]];_0xE30D= _0xE3D1[_$_a1e5[4]];_0xE249= _0xE3D1[_$_a1e5[5]];_0xE36F= _0xE3D1[_$_a1e5[6]];document[_$_a1e5[9]](_$_a1e5[8])[_$_a1e5[7]]= _0xE2AB;
+	}
+	
+}
+function discon_user()
+{
+	firebase[_$_a1e5[1]]()[_$_a1e5[16]]()[_$_a1e5[15]](function()
+	{
+		window[_$_a1e5[14]](_$_a1e5[11],_$_a1e5[12],_$_a1e5[13],true);
+	}
+	)[_$_a1e5[10]](function(_0xE185)
+	{
+		
+	}
+	);
+}
+        </script>
+    </body>
+</html>

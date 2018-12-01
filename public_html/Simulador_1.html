@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Simulador de Compras</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="w3.css">
+        <link rel="stylesheet" type="text/css" href="KD_css.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-functions.js"></script>
+        
+    </head>
+    <body>
+        <!-- Apresentação de Interface para escolha de productos -->
+        <!-- Tabela de Productos -->
+        <div class="w3-responsive" style="width:85%">
+        <table class="w3-table w3-centered"> <!-- style="width:70%;"> <!--id="table_simul">-->
+            <caption>Tabela de Comparação & Ganhos</caption>
+            <tr>
+                <th>Item#</th>
+                <th>Nome</th>
+                <th>Escolha</th>
+                <th style="width: 10px;">Preço(UN)</th>
+                <th style="width: 10px;">Qtd</th>
+                <!--<th style="width: 10px;">Total P(Kz)</th>-->
+                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <!--<th>Total Prod. CBA(Kz)</th>-->
+                <th style="color:green;">GANHO CBA(Kz)</th>
+            </tr>
+            
+            <tr>
+                <td>1</td>
+                <td>Cerveja</td>
+                <td><input type="checkbox" name="first_item_user_select"></td>
+                <td><input type="number" min="0" max="1000" name="first_item_price" step="0.10" value="0"></td>
+                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
+                <!--<th style="width: 10px;">Total P(Kz)</th>-->
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                
+                <td><input type="text" name="CBA_first_item_total_gain"></td>
+            </tr>
+            
+            <tr>
+                <td>2</td>
+                <td>Água</td>
+                <td><input type="checkbox" name="second_item_user_select"></td>
+                <td><input type="number" min="0" max="1000" name="second_item_price" step="0.10" value="0"></td>
+                <td><input type="number" min="0" max="100" name="second_item_quanity" step="1" value="0"></td>
+                <!--<th style="width: 10px;">Total P(Kz)</th>-->
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                
+                <td><input type="text" name="CBA_second_item_total_gain"></td>
+            </tr>
+            
+            <tr>
+                <td>3</td>
+                <td>Óleo de Soja</td>
+                <td><input type="checkbox" name="third_item_user_select"></td>
+                <td><input type="number" min="0" max="1000" name="third_item_price" step="0.10" value="0"></td>
+                <td><input type="number" min="0" max="100" name="third_item_quanity" step="1" value="0"></td>
+                <!--<th style="width: 10px;">Total P(Kz)</th>-->
+                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                
+                <td><input type="text" name="CBA_third_item_total_gain"></td>
+            </tr>
+            
+            <tr>
+               <td>4</td> 
+                <td>Óleo de Palma</td>
+                <td><input type="checkbox" name="fourth_item_user_select"></td>
+                <td><input type="number" min="0" max="1000" name="fourth_item_price" step="0.10" value="0"></td>
+                <td><input type="number" min="0" max="100" name="fourth_item_quanity" step="1" value="0"></td>
+                <!--<th style="width: 10px;">Total P(Kz)</th>-->
+                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+               
+                <td><input type="text" name="CBA_fourth_item_total_gain"></td>
+            </tr>
+            
+            <tr>
+                <td>5</td>
+                <td>Leite</td>
+                <td><input type="checkbox" name="first_item_user_select"></td>
+                <td><input type="number" min="0" max="100000" name="first_item_price" step="0.50" value="0"></td>
+                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
+                <!--<th style="width: 10px;">Total P(Kz)</th>-->
+                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                
+                <td><input type="text" name="CBA_first_item_total_gain"></td>
+            </tr>
+            
+            <tr>
+                <td>6</td>
+                <td>Pão</td>
+                <td><input type="checkbox" name="first_item_user_select"></td>
+                <td><input type="number" min="0" max="100000" name="first_item_price" step="0.50" value="0"></td>
+                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
+                <!--<th style="width: 10px;">Total P(Kz)</th>-->
+                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                
+                <td><input type="text" name="CBA_first_item_total_gain"></td>
+            </tr>
+            
+            <tr>
+                <td>7</td>
+                <td>Açucar</td>
+                <td><input type="checkbox" name="first_item_user_select"></td>
+                <td><input type="number" min="0" max="100000" name="first_item_price" step="0.50" value="0"></td>
+                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
+                <!--<th style="width: 10px;">Total P(Kz)</th>-->
+                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+               
+                <td><input type="text" name="CBA_first_item_total_gain"></td>
+            </tr>
+            
+            <tr>
+                <td>8</td>
+                <td>Ovos</td>
+                <td><input type="checkbox" name="first_item_user_select"></td>
+                <td><input type="number" min="0" max="100000" name="first_item_price" step="0.50" value="0"></td>
+                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
+                <!--<th style="width: 10px;">Total P(Kz)</th>-->
+                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+               
+                <td><input type="text" name="CBA_first_item_total_gain"></td>
+            </tr>
+            
+            <tr>
+                <td>9</td>
+                <td>Farinha de Trigo</td>
+                <td><input type="checkbox" name="first_item_user_select"></td>
+                <td><input type="number" min="0" max="100000" name="first_item_price" step="0.50" value="0"></td>
+                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
+                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                
+                <td><input type="text" name="CBA_first_item_total_gain"></td>
+            </tr>
+            
+            <tr>
+                <td>10</td>
+                <td>Sal</td>
+                <td><input type="checkbox" name="first_item_user_select"></td>
+                <td><input type="number" min="0" max="100000" name="first_item_price" step="0.50" value="0"></td>
+                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
+                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+               
+                <td><input type="text" name="CBA_first_item_total_gain"></td>
+            </tr>
+            
+            <tr>
+                <td>11</td>
+                <td>Arroz</td>
+                <td><input type="checkbox" name="first_item_user_select"></td>
+                <td><input type="number" min="0" max="100000" name="first_item_price" step="0.50" value="0"></td>
+                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
+                
+                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                
+                <td><input type="text" name="CBA_first_item_total_gain"></td>
+            </tr>
+            
+            <tr>
+                <td>12</td>
+                <td>Massa</td>
+                <td><input type="checkbox" name="first_item_user_select"></td>
+                <td><input type="number" min="0" max="100000" name="first_item_price" step="0.50" value="0"></td>
+                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
+               
+               <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                
+                <td><input type="text" name="CBA_first_item_total_gain"></td>
+            </tr>
+            
+            <tr>
+                <td>13</td>
+                <td>Feijão</td>
+                <td><input type="checkbox" name="first_item_user_select"></td>
+                <td><input type="number" min="0" max="100000" name="first_item_price" step="0.50" value="0"></td>
+                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
+                <!--<th style="width: 10px;">Total P(Kz)</th>-->
+                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                
+                <td><input type="text" name="CBA_first_item_total_gain"></td>
+            </tr>
+            
+            <tr>
+                <td>14</td>
+                <td>Frango</td>
+                <td><input type="checkbox" name="first_item_user_select"></td>
+                <td><input type="number" min="0" max="100000" name="first_item_price" step="0.50" value="0"></td>
+                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
+               
+                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                
+                <td><input type="text" name="CBA_first_item_total_gain"></td>
+            </tr>
+            
+            <tr>
+                <td>15</td>
+                <td>Peixe</td>
+                <td><input type="checkbox" name="first_item_user_select"></td>
+                <td><input type="number" min="0" max="100000" name="first_item_price" step="0.50" value="0"></td>
+                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
+               
+                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                
+                <td><input type="text" name="CBA_first_item_total_gain"></td>
+            </tr>
+            
+            <tr>
+                <td>16</td>
+                <td>Carne Seca</td>
+                <td><input type="checkbox" name="first_item_user_select"></td>
+                <td><input type="number" min="0" max="100000" name="first_item_price" step="0.50" value="0"></td>
+                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
+               
+                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                
+                <td><input type="text" name="CBA_first_item_total_gain"></td>
+            </tr>
+            
+            <tr>
+                <td>17</td>
+                <td>Fuba de Milho</td>
+                <td><input type="checkbox" name="first_item_user_select"></td>
+                <td><input type="number" min="0" max="100000" name="first_item_price" step="0.50" value="0"></td>
+                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
+               
+                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                
+                <td><input type="text" name="CBA_first_item_total_gain"></td>
+            </tr>
+            
+            <tr>
+                <td>18</td>
+                <td>Fuba de Mandioca</td>
+                <td><input type="checkbox" name="first_item_user_select"></td>
+                <td><input type="number" min="0" max="100000" name="first_item_price" step="0.50" value="0"></td>
+                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
+              
+                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+               
+                <td><input type="text" name="CBA_first_item_total_gain"></td>
+            </tr>
+            
+            <tr>
+                <td>19</td>
+                <td>Pasta Dentrífica</td>
+                <td><input type="checkbox" name="first_item_user_select"></td>
+                <td><input type="number" min="0" max="100000" name="first_item_price" step="0.50" value="0"></td>
+                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
+                
+                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                
+                <td><input type="text" name="CBA_first_item_total_gain"></td>
+            </tr>
+            
+            <tr>
+                <td>20</td>
+                <td>Sabão em Barra</td>
+                <td><input type="checkbox" name="first_item_user_select"></td>
+                <td><input type="number" min="0" max="100000" name="first_item_price" step="0.50" value="0"></td>
+                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
+               
+                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                
+                <td><input type="text" name="CBA_first_item_total_gain"></td>
+            </tr>
+            <tr>
+                <td colspan="7"></td>
+                
+            </tr>
+            
+            <tr>
+                <td colspan="6"><input type="button" value="Ganhos Totais: (Carregue no Botão!)" onclick="SimulPoup()"></td>
+                <td><input type="text" name="Total_Gain"></td>
+            </tr>
+            <tr>
+                <td colspan="7"><input type="button" value="Encomende Já !" onclick="SimulPoup()"></td>
+               
+                
+            </tr>
+            
+            
+            
+            
+        </table></div>
+        
+        <div>
+            
+        </div>
+        
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-functions.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAgkLaQTz2rkoEgi4pBf5X5QXxBgqwRFos",
+    authDomain: "cestbaselista.firebaseapp.com",
+    databaseURL: "https://cestbaselista.firebaseio.com",
+    projectId: "cestbaselista",
+    storageBucket: "cestbaselista.appspot.com",
+    messagingSenderId: "679151408753"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script>
+    
+    function SimulPoup() {
+  
+        
+        /*this.firstNumber = document.getElementById('first_item_quantity');
+        this.firstNumber = document.getElementById('first_item_quantity');
+        this.firstNumber = document.getElementById('first_item_quantity');
+        this.firstNumber = document.getElementById('first_item_quantity');
+        this.firstNumber = document.getElementById('first_item_quantity');
+        this.firstNumber = document.getElementById('first_item_quantity');
+        this.firstNumber = document.getElementById('first_item_quantity');
+        this.firstNumber = document.getElementById('first_item_quantity');
+        this.firstNumber = document.getElementById('first_item_quantity');
+        this.firstNumber = document.getElementById('first_item_quantity');
+        this.firstNumber = document.getElementById('first_item_quantity');
+        this.firstNumber = document.getElementById('first_item_quantity');
+        this.firstNumber = document.getElementById('first_item_quantity');
+        this.firstNumber = document.getElementById('first_item_quantity');
+        this.firstNumber = document.getElementById('first_item_quantity');
+        this.firstNumber = document.getElementById('first_item_quantity');
+        this.firstNumber = document.getElementById('first_item_quantity');
+        this.firstNumber = document.getElementById('first_item_quantity');
+        this.firstNumber = document.getElementById('first_item_quantity');
+        this.firstNumber = document.getElementById('first_item_quantity');
+        */
+        // Add Click events to buttons.
+        //this.addMessageButton.addEventListener('click', this.addMessage.bind(this));
+        // Listen for auth state changes.
+        //firebase.auth().onAuthStateChanged(this.onAuthStateChanged.bind(this));
+        
+        window.open("404.html", _self, "", true);
+    //}
+    
+    // Adds two numbers by calling the `addNumbers` server-side function.
+//SimulPoup.prototype.SimulatorExec = function() {
+  //var firstNumber = parseFloat(this.firstNumber.value);
+  /*var secondNumber = parseFloat(this.secondNumber.value);
+  var addNumbersButton = this.addNumbersButton;
+  addNumbersButton.disabled = true;*/
+  // [START callAddFunction]
+  //var sendNotification = firebase.functions().httpsCallable('SimulatorExec');
+  //sendNotification({firstNumber: firstNumber}).then(function(result) {
+    //console.log('Cloud Function called successfully.', result);
+    // Read results of the Cloud Function.
+    //var firstNumber = result.data.firstNumber;
+    /*var secondNumber = result.data.secondNumber;
+    var operationResult = result.data.operationResult;
+    var operator = result.data.operator;*/
+    // [START_EXCLUDE]
+    //window.alert('Here is the result of the formula: ' + firstNumber);
+    //addNumbersButton.disabled = false;
+    // [END_EXCLUDE]
+ // }).catch(function(error) {
+    // Getting the Error details.
+   // var code = error.code;
+   // var message = error.message;
+   // var details = error.details;
+    // [START_EXCLUDE]
+   // console.error('There was an error when calling the Cloud Function', error);
+   // window.alert('There was an error when calling the Cloud Function:\n\nError Code: '
+     //   + code + '\nError Message:' + message + '\nError Details:' + details);
+   // addNumbersButton.disabled = false;
+    // [END_EXCLUDE]
+  //});
+  // [END callAddFunction]
+//};
+    }    
+</script>
+
+
+    </body>
+    
+
+</html>

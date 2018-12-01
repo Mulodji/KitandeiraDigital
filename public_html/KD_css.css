@@ -1,0 +1,102 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12/jun/2018, 9:01:05
+    Author     : hp
+*/
+
+
+    #first, #second, #third, #fourth, #fifth, #sixth, #seventh, #eighth, #nineth, #tenth
+    , #eleventh, #twelveth, #thirteenth, #fourteenth, #fifteenth, #sixteenth
+    , #seventeenth, #eighteenth, #nineteenth, #twentyth{
+        text-align:end;
+        color:red;
+        cursor:pointer;
+    }
+    img{
+        width:100%;
+        cursor:pointer;
+    }
+    a.fb-msg-btn{
+        display: inline-block;
+        font-family: inherit;
+        font-size: 14px;
+        font-weight: bold;
+        color: #fff;
+        color: #fff;
+        text-align: center;
+        padding: 12px 16px;
+        margin: 0;
+        background-color: #0084ff;
+        border: 0;
+        border-radius: 5px; 
+        -moz-border-radius: 5px; 
+        -webkit-border-radius: 5px;
+        cursor: pointer;
+        outline: none;
+    }
+    a:hover.fb-msg-btn { 
+        background-color: #0268c7; 
+    }
+    
+    #fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    
+    }
+    
+    .anuid, .mensalid{
+        color:red;
+        font-weight:bold;
+    }
+    
+    .bt{
+        text-align: right;
+    }
+    table, th, td{
+        border: 1px solid black;
+    }
+    #body_ajuda{
+        background-color: lightgreen;
+    }
+    
+    /* Main file (index.html) Footer CSS */
+    body{
+        background-image: url("Tab_1.png");
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333333;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+        font-size:smaller;
+    }
+
+    li a:hover {
+        background-color: #111111;
+    }
+    
+    #table_simul{
+        border: 1px solid black;
+    }
+
+    
+    
+

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Kitandeira-Digital</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" type="text/css" href="KD_css.css">
+        <!--<style>
+            #first{
+                background-image:url('beer_pouring.jpg');
+                text-align:end;
+                width:200px;
+                height:200px;
+            }
+            #second{
+                background-image:url('agua_fresca.jpg');
+                text-align:end;
+                width:200px;
+                height:200px;
+            }
+        </style>-->
+        
+    </head>
+    <body>
+        
+        
+
+        <div class="w3-container">
+            <table class="w3-table w3-mobile">
+                <caption>Cesta Básica - Produtos</caption>
+                <tr>
+                    <td id="first" onclick='pos_1_data()'><strong>Cerveja</strong></td>
+                    <td id="second" onclick='pos_2_data()'><strong>Água</strong></td>
+                    <td id="third" onclick='pos_3_data()'><strong>Óleo de Soja</strong></td>
+                    <td id="fourth" onclick='pos_4_data()'><strong>Óleo de Palma</strong></td>
+                </tr>
+                
+                <tr>
+                    <td id="fifth" onclick='pos_5_data()'><strong>Leite</strong></td>
+                    <td id="sixth" onclick='pos_6_data()'><strong>Pão</strong></td>
+                    <td id="seventh" onclick='pos_7_data()'><strong>Açucar</strong></td>
+                    <td id="eighth" onclick='pos_8_data()'><strong>Ovo</strong></td>
+                    
+                </tr>
+                
+                <tr>
+                    <td id="nineth" onclick='pos_9_data()'><strong>Farinha de Trigo</strong></td>
+                    <td id="tenth" onclick='pos_10_data()'><strong>Sal</strong></td>
+                    <td id="eleventh" onclick='pos_11_data()'><strong>Arroz</strong></td>
+                    <td id="twelveth" onclick='pos_12_data()'><strong>Massa</strong></td>
+                   
+                </tr>
+                
+                <tr>
+                     <td id="thirteenth" onclick='pos_13_data()'><strong>Feijão</strong></td>
+                    <td id="fourteenth" onclick='pos_14_data()'><strong>Frango</strong></td>
+                    <td id="fifteenth" onclick='pos_15_data()'><strong>Peixe</strong></td>
+                    <td id="sixteenth" onclick='pos_16_data()'><strong>Carne</strong></td>
+                   
+                </tr>
+                
+                <tr>
+                     <td id="seventeenth" onclick='pos_17_data()'><strong>Fuba de Milho</strong></td>
+                    <td id="eighteenth" onclick='pos_18_data()'><strong>Fuba de Mandioca</strong></td>
+                    <td id="nineteenth" onclick='pos_19_data()'><strong>Pasta Dentrífica</strong></td>
+                    <td id="twentyth" onclick='pos_20_data()'><strong>Sabão em Barra</strong></td>
+                    
+                </tr>
+                
+            </table>
+        </div>
+         <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAgkLaQTz2rkoEgi4pBf5X5QXxBgqwRFos",
+    authDomain: "cestbaselista.firebaseapp.com",
+    databaseURL: "https://cestbaselista.firebaseio.com",
+    projectId: "cestbaselista",
+    storageBucket: "cestbaselista.appspot.com",
+    messagingSenderId: "679151408753"
+  };
+  firebase.initializeApp(config);
+  
+  //Add your code here...!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  var firstPrice=document.getElementById('first');
+  var dbRef=firebase.database().ref().child('2018-06-09').child('Cerveja').child('mPreco');
+  dbRef.on('value', snap => firstPrice.innerText = snap.val());
+  
+</script>
+<script>
+            function pos_1_data(){
+             window.open("pos01_data.html");
+            }
+            function pos_2_data(){
+             window.open("pos02_data.html");
+            }
+            function pos_3_data(){
+             window.open("pos03_data.html");
+            }
+            function pos_4_data(){
+             window.open("pos04_data.html");
+            }
+            function pos_5_data(){
+             window.open("pos05_data.html");
+            }
+            function pos_6_data(){
+             window.open("pos06_data.html");
+            }
+            function pos_7_data(){
+             window.open("pos07_data.html");
+            }
+            function pos_8_data(){
+             window.open("pos08_data.html");
+            }
+            function pos_9_data(){
+             window.open("pos09_data.html");
+            }
+            function pos_10_data(){
+             window.open("pos10_data.html");
+            }
+            function pos_11_data(){
+             window.open("pos11_data.html");
+            }
+            function pos_12_data(){
+             window.open("pos12_data.html");
+            }
+            function pos_13_data(){
+             window.open("pos13_data.html");
+            }
+            function pos_14_data(){
+             window.open("pos14_data.html");
+            }
+            function pos_15_data(){
+             window.open("pos15_data.html");
+            }
+            function pos_16_data(){
+             window.open("pos16_data.html");
+            }
+            function pos_17_data(){
+             window.open("pos17_data.html");
+            }
+            function pos_18_data(){
+             window.open("pos18_data.html");
+            }
+            function pos_19_data(){
+             window.open("pos19_data.html");
+            }
+            function pos_20_data(){
+             window.open("pos20_data.html");
+            }
+        </script>
+       
+    </body>
+</html>
