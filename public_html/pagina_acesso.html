@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="w3.css">
+        
+        <style>
+            body{
+                background-image: url("Tab_3.png");
+                background-size: cover;
+            }
+            
+        </style>
+        
+        <!-- *******************************************************************************************
+       * TODO(DEVELOPER): Paste the initialization snippet from:
+       * Firebase Console > Overview > Add Firebase to your web app. *
+       ***************************************************************************************** -->
+     <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyAgkLaQTz2rkoEgi4pBf5X5QXxBgqwRFos",
+        authDomain: "cestbaselista.firebaseapp.com",
+        databaseURL: "https://cestbaselista.firebaseio.com",
+        projectId: "cestbaselista",
+        storageBucket: "cestbaselista.appspot.com",
+        messagingSenderId: "679151408753"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.0.0/firebaseui.css" />
+    <script type="text/javascript">
+      // FirebaseUI config.
+      var uiConfig = {
+        signInSuccessUrl: 'index_registered_user_3.html',
+        signInOptions: [
+          // Leave the lines as is for the providers you want to offer your users.
+          firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+          firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+          //firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+          //firebase.auth.GithubAuthProvider.PROVIDER_ID,
+            {
+            provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
+            requireDisplayName: true
+            }
+          //firebase.auth.PhoneAuthProvider.PROVIDER_ID
+        ],
+        // Terms of service url.
+        tosUrl: 'ticnes_tos.html'
+      };
+
+      // Initialize the FirebaseUI Widget using Firebase.
+      var ui = new firebaseui.auth.AuthUI(firebase.auth());
+      // The start method will wait until the DOM is loaded.
+      ui.start('#firebaseui-auth-container', uiConfig);
+      </script>
+    </head>
+    <body>
+        <div class="w3-container w3-center">
+            
+            <!--<p>teste de background </p>-->
+            <img src="Cesta Básica Angola_logo_final.png" alt="pagina de acesso" style="width:25%; height:auto;">
+            <h3 style="text-align:center">Bem Vindo à Cesta Básica Angola</h3>
+            <h4 style="text-align:center">Faça o seu acesso, ou registo, AQUI !!!</h4>
+            <div id="firebaseui-auth-container"></div>
+            
+        </div>
+    </body>
+</html>

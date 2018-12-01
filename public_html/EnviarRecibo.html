@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Enviar Factura</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="w3.css">
+        <style>
+            /* Center the loader */
+            #loader {
+              display: none;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              z-index: 1;
+              width: 150px;
+              height: 150px;
+              margin: -75px 0 0 -75px;
+              border: 16px solid #f3f3f3;
+              border-radius: 50%;
+              border-top: 16px solid #3498db;
+              width: 120px;
+              height: 120px;
+              -webkit-animation: spin 2s linear infinite;
+              animation: spin 2s linear infinite;
+            }
+
+            @-webkit-keyframes spin {
+              0% { -webkit-transform: rotate(0deg); }
+              100% { -webkit-transform: rotate(360deg); }
+            }
+
+            @keyframes spin {
+              0% { transform: rotate(0deg); }
+              100% { transform: rotate(360deg); }
+            }
+            
+            
+           
+            #snackbar {
+                visibility: hidden;
+                min-width: 250px;
+                margin-left: -125px;
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+                border-radius: 2px;
+                padding: 16px;
+                position: fixed;
+                z-index: 1;
+                left: 50%;
+                bottom: 30px;
+                font-size: 17px;
+            }
+
+            #snackbar.show {
+                visibility: visible;
+                -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+                animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            }
+
+            @-webkit-keyframes fadein {
+                from {bottom: 0; opacity: 0;} 
+                to {bottom: 30px; opacity: 1;}
+            }
+
+            @keyframes fadein {
+                from {bottom: 0; opacity: 0;}
+                to {bottom: 30px; opacity: 1;}
+            }
+
+            @-webkit-keyframes fadeout {
+                from {bottom: 30px; opacity: 1;} 
+                to {bottom: 0; opacity: 0;}
+            }
+
+            @keyframes fadeout {
+                from {bottom: 30px; opacity: 1;}
+                to {bottom: 0; opacity: 0;}
+            }
+            
+            body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.bg {
+    /* The image used */
+    position: absolute;
+    background-image: url("Enviar_facturas png.png");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#filesubmit{
+    position:absolute;
+    top:20px;
+    left:70px;
+}
+        </style>
+    </head>
+    <body class="w3-mobile">
+         <div class="bg">
+            <!--<button class="w3-circle w3-display-bottommiddle w3-light-grey" onclick="open_cba_main()"><strong>ABRIR</strong></button>-->
+        
+        <div>
+            <h1>ENVIAR FACTURAS</h1><hr><br>
+        </div>
+        <div id="filesubmit">
+            <!--<input type="file" class="file-select" accept="image/*"/><br><br>-->
+            <input type="file" class="file-select" accept="image/*"/>Seleccionar ficheiro<br><br>
+            <button class="file-submit">ENVIAR</button>
+        </div>
+        <div id="loader"></div>
+        <div id="snackbar">Some text some message..</div>
+        
+         </div>
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAgkLaQTz2rkoEgi4pBf5X5QXxBgqwRFos",
+    authDomain: "cestbaselista.firebaseapp.com",
+    databaseURL: "https://cestbaselista.firebaseio.com",
+    projectId: "cestbaselista",
+    storageBucket: "cestbaselista.appspot.com",
+    messagingSenderId: "679151408753"
+  };
+  firebase.initializeApp(config);
+  
+  //Verifying user is a registered user
+  //If user is not registered user, then send it to the registration page
+  //If user IS a registered user, then...proceed with file upload as follows
+  
+  
+  firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    console.log('success. processing registered user');
+        const storageService = firebase.storage();
+        const storageRef = storageService.ref();
+
+        document.querySelector('.file-select').addEventListener('change', handleFileUploadChange);
+        document.querySelector('.file-submit').addEventListener('click', handleFileUploadSubmit);
+
+        let selectedFile;
+        function handleFileUploadChange(e) {
+            selectedFile = e.target.files[0];
+        }
+
+        function handleFileUploadSubmit(e) {
+            document.getElementById("loader").style.display = "block";
+            
+            //const uploadTask = storageRef.child(`images/${selectedFile.name}`).put(selectedFile); //create a child directory called images, and place the file inside this directory
+             const uploadTask = storageRef.child(`${user.uid}/${selectedFile.name}`).put(selectedFile); //create a child directory called images, and place the file inside this directory
+            uploadTask.on('state_changed', (snapshot) => {
+            // Observe state change events such as progress, pause, and resume
+            }, (error) => {
+                // Handle unsuccessful uploads
+                console.log(error);
+            }, () => {
+                // Do something once upload is complete
+                document.getElementById("loader").style.display = "none";
+                //Written notification of file upload successful completion
+                
+                console.log('success');
+                var x = document.getElementById("snackbar");
+                x.className = "show";
+                setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+            });
+        }
+    
+  } else {
+    // No user is signed in.
+    console.log('User not registered/signed in...!');
+    window.open("pagina_acesso_EnviarFacturas.html");
+    
+  }
+});
+
+  
+  /*var user = firebase.auth().currentUser;
+    if (user) {
+    // User is signed in.
+        console.log('success. processing registered user');
+        const storageService = firebase.storage();
+        const storageRef = storageService.ref();
+
+        document.querySelector('.file-select').addEventListener('change', handleFileUploadChange);
+        document.querySelector('.file-submit').addEventListener('click', handleFileUploadSubmit);
+
+        let selectedFile;
+        function handleFileUploadChange(e) {
+            selectedFile = e.target.files[0];
+        }
+
+        function handleFileUploadSubmit(e) {
+            const uploadTask = storageRef.child(`images/${selectedFile.name}`).put(selectedFile); //create a child directory called images, and place the file inside this directory
+            uploadTask.on('state_changed', (snapshot) => {
+            // Observe state change events such as progress, pause, and resume
+            }, (error) => {
+                // Handle unsuccessful uploads
+                console.log(error);
+            }, () => {
+                // Do something once upload is complete
+                console.log('success');
+            });
+        }
+    
+    } else {
+    // No user is signed in.
+    //Sen screen message:"You're not signed in. Please register or signed in...!
+     //alert("User not registered/signed in...!");
+    console.log('User not registered/signed in...!');
+    window.open("pagina_acesso_EnviarFacturas.html");
+    }
+  */
+  
+    
+</script>    
+    </body>
+    
+
+</html>

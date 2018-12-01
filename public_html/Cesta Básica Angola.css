@@ -1,0 +1,145 @@
+@charset "utf-8";
+	.image5
+{
+	background-image : url(image5.png);
+	background-repeat : no-repeat;
+	position : absolute ;
+	left : 1252px;
+	top : 159px;
+	width : 390px;
+	height : 340px;
+}
+.image6
+{
+	background-image : url(image6.png);
+	background-repeat : no-repeat;
+	position : absolute ;
+	left : 1065px;
+	top : 391px;
+	width : 62px;
+	height : 88px;
+}
+.image3
+{
+	background-image : url(image3.png);
+	background-repeat : no-repeat;
+	position : absolute ;
+	left : 1642px;
+	top : 926px;
+	width : 257px;
+	height : 150px;
+}
+.image4
+{
+	background-image : url(image4.png);
+	background-repeat : no-repeat;
+	position : absolute ;
+	left : 307px;
+	top : 270px;
+	width : 325px;
+	height : 406px;
+}
+.image10
+{
+	background-image : url(image10.png);
+	background-repeat : no-repeat;
+	position : absolute ;
+	left : 820px;
+	top : 17px;
+	width : 222px;
+	height : 229px;
+}
+.image8
+{
+	background-image : url(image8.png);
+	background-repeat : no-repeat;
+	position : absolute ;
+	left : 1524px;
+	top : 451px;
+	width : 104px;
+	height : 221px;
+}
+.image7
+{
+	background-image : url(image7.png);
+	background-repeat : no-repeat;
+	position : absolute ;
+	left : 1173px;
+	top : 422px;
+	width : 93px;
+	height : 97px;
+}
+.image9
+{
+	background-image : url(image9.png);
+	background-repeat : no-repeat;
+	position : absolute ;
+	left : 714px;
+	top : 291px;
+	width : 79px;
+	height : 76px;
+}
+.image11
+{
+	background-image : url(image11.png);
+	background-repeat : no-repeat;
+	position : absolute ;
+	left : 0px;
+	top : 0px;
+	width : 1920px;
+	height : 1080px;
+}
+.image
+{
+	background-image : url(image.png);
+	background-repeat : no-repeat;
+	position : absolute ;
+	left : 815px;
+	top : 968px;
+	width : 248px;
+	height : 88px;
+}
+.image1
+{
+	background-image : url(image1.png);
+	background-repeat : no-repeat;
+	position : absolute ;
+	left : 1120px;
+	top : 968px;
+	width : 255px;
+	height : 88px;
+}
+.image2
+{
+	background-image : url(image2.png);
+	background-repeat : no-repeat;
+	position : absolute ;
+	left : 497px;
+	top : 968px;
+	width : 246px;
+	height : 88px;
+}
+.Estilodecaracterenormal1
+{
+	font-family : Yard Sale;
+	font-size : 187px;
+	color : #F2F2F2;
+	color : rgb(242, 242, 242);
+	text-shadow : 7px 7px 5px rgba(0, 0, 0, 0.75);
+}
+.Estilodecaracterenormal2
+{
+	font-family : Yard Sale;
+	font-size : 149px;
+	color : #F2F2F2;
+	color : rgb(242, 242, 242);
+	text-shadow : 7px 7px 5px rgba(0, 0, 0, 0.75);
+}
+.Estilodecaracterenormal
+{
+	font-family : Yard Sale;
+	font-size : 119px;
+	color : #8CC63F;
+	color : rgb(140, 198, 63);
+	text-shadow : 5px 2px 2px rgba(0, 0, 0, 0.75);
+}
