@@ -6,35 +6,324 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Processo de Encomendas</title>
+        <title>Processo de Encomendas - Verificação</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            
+            table, th, td{
+                border: 2px solid black;
+            }
+            .tabela{
+                border: 2px solid black;
+            }
+            label{
+                width: 130px;
+            }
+            #label1{width:130px;}
+            #rua{
+                
+                padding-right:0%;
+            }
+            #rua_layout_frame{
+                padding-right:7%;
+                float: left;
+            }
+        </style>
+        <!-- *******************************************************************************************
+       * TODO(DEVELOPER): Paste the initialization snippet from:
+       * Firebase Console > Overview > Add Firebase to your web app. *
+       ***************************************************************************************** -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyAgkLaQTz2rkoEgi4pBf5X5QXxBgqwRFos",
+        authDomain: "cestbaselista.firebaseapp.com",
+        databaseURL: "https://cestbaselista.firebaseio.com",
+        projectId: "cestbaselista",
+        storageBucket: "cestbaselista.appspot.com",
+        messagingSenderId: "679151408753"
+        };
+        firebase.initializeApp(config);
+    </script>
     </head>
     <body>
-        <div>
-            <section id="client_check_out_balance">
-                
-            </section>
-        </div>
+        
         
         <div>
             <section id="client_id_full">
-                
+                <h2>Identificação do Cliente</h2>
+                <div id="label1">Nome Próprio:</div><input type="text" name="nome_proprio" id="fname" placeholder="Nome Proprio" ><br><br>
+                <div id="label2">Apelido:</div><input type="text" name="apelido" id="lname" placeholder="Apelido"><br><br>
+                <div id="label3">TLM#:</div><input type="text" name="phone_num" id="phone" placeholder="Numero de Telefone"><br><br>
             </section>
-        </div>
+        </div><hr>
         
         <div>
+            <section id="client_order_specific_requirements">
+                <h2>Requisitos particulares da Encomenda</h2>
+                <div id="rua_layout_frame">Endereço de Entrega_RUA:</div><input type="text" name="nome_rua" id="rua" placeholder="Nome de Rua"><br>
+                Endereço de Entrega_CASA_NÚMERO:<input type="text" name="casa_numero" id="casa_num" placeholder="Número da Casa"><br>
+                Endereço de Entrega_Município:<input type="text" name="rua_municipio" id="municipio" placeholder="Municipio de Localização"><br>
+                Endereço de Entrega_Província:<select name="provincias_entrega_em">
+                                        <option value="Luanda">Luanda</option>
+                                        <option value="Benguela">Benguela</option>
+                </select><br><br>    
+                
+                Hora de Entrega:<input type="datetime-local" name="hora_dia" id="date_time"><br><br>
+                Método de Pagamento:<select name="pagamento_em">
+                                        <option value="CASH">CASH</option>
+                                        <option value="TPA">Multicaixa</option>
+                </select><br>    
+                
+                
+            </section>
+        </div><hr>
+        
+        <div id="order_table">
             <section id="client_order_items">
+                <h2 id='title_select_products'>Selecção de produtos a Encomendar</h2>
                 <table>
                     <caption>Select Items and Quantities</caption>
                     <tr>
                         <th>Item#</th>
                         <th>Description</th>
-                        <th>Selection</th>
-                        <th>Quantity</th>
+                        <th>Qty</th>
+                        <th>Unit<br>Price</th>
+                        <th>Total Price</th>
                     </tr>
+                    
+                    <tr id="row2">
+                        <td id="data11">1<input type="checkbox" name="item_select1" id='check_data11'></td>
+                        <td id="data12">Cerveja</td>
+                        <td id="data13"><input type="number" name="item_qty" value="3"></td>
+                        <td id="data14">125</td>
+                        <td><input type="number" name="item_total1" value="250" id='data15'></td>
+                    </tr>
+                    <tr id="row3">
+                        <td id="data21">2-<input type="checkbox" name="item_select2" id='check_data21'></td>
+                        <td id="data22">Água</td>
+                        <td id="data23"><input type="number" name="item_qty" value="3"></td>
+                        <td id="data24">85</td>
+                        <td><input type="number" name="item_total2" value="340" id='data25'></td>
+                    </tr>
+                    <tr id="row4">
+                       <td id="data31">3</td>
+                        <td id="data32">Óleo de Soja</td>
+                        <td id="data33">1</td>
+                        <td id="data34">600</td>
+                        <td id="data35">600</td>
+                    </tr>
+                    <tr id="row5">
+                        <td id="data41">4</td>
+                        <td id="data42">Cerveja</td>
+                        <td id="data43">2</td>
+                        <td id="data44">125</td>
+                        <td id="data45">250</td>
+                    </tr>
+                    <tr id="row6">
+                        <td id="data51">5</td>
+                        <td id="data52">Água</td>
+                        <td id="data53">4</td>
+                        <td id="data54">85</td>
+                        <td id="data55">340</td>
+                    </tr>
+                    <tr id="row7">
+                       <td id="data61">6</td>
+                        <td id="data62">Óleo de Soja</td>
+                        <td id="data63">1</td>
+                        <td id="data64">600</td>
+                        <td id="data65">600</td>
+                    </tr>
+                    <tr id="row8">
+                        <td id="data71">7</td>
+                        <td id="data72">Cerveja</td>
+                        <td id="data73">2</td>
+                        <td id="data74">125</td>
+                        <td id="data75">250</td>
+                    </tr>
+                    <tr id="row9">
+                        <td id="data81">8</td>
+                        <td id="data82">Água</td>
+                        <td id="data83">4</td>
+                        <td id="data84">85</td>
+                        <td id="data85">340</td>
+                    </tr>
+                    <tr id="row10">
+                       <td id="data91">9</td>
+                        <td id="data92">Óleo de Soja</td>
+                        <td id="data93">1</td>
+                        <td id="data94">600</td>
+                        <td id="data95">600</td>
+                    </tr>
+                    <tr id="row11">
+                        <td id="data101">10</td>
+                        <td id="data102">Cerveja</td>
+                        <td id="data103">2</td>
+                        <td id="data104">125</td>
+                        <td id="data105">250</td>
+                    </tr>
+                    <tr id="row12">
+                        <td id="data111">11</td>
+                        <td id="data112">Água</td>
+                        <td id="data113">4</td>
+                        <td id="data114">85</td>
+                        <td id="data115">340</td>
+                    </tr>
+                    <tr id="row13">
+                       <td id="data121">12</td>
+                        <td id="data122">Óleo de Soja</td>
+                        <td id="data123">1</td>
+                        <td id="data124">600</td>
+                        <td id="data125">600</td>
+                    </tr>
+                    <tr id="row14">
+                        <td id="data131">13</td>
+                        <td id="data132">Cerveja</td>
+                        <td id="data133">2</td>
+                        <td id="data134">125</td>
+                        <td id="data135">250</td>
+                    </tr>
+                    <tr id="row15">
+                        <td id="data141">14</td>
+                        <td id="data142">Água</td>
+                        <td id="data143">4</td>
+                        <td id="data144">85</td>
+                        <td id="data145">340</td>
+                    </tr>
+                    <tr id="row16">
+                       <td id="data151">15</td>
+                        <td id="data152">Óleo de Soja</td>
+                        <td id="data153">1</td>
+                        <td id="data154">600</td>
+                        <td id="data155">600</td>
+                    </tr>
+                    <tr id="row17">
+                        <td id="data161">16</td>
+                        <td id="data162">Cerveja</td>
+                        <td id="data163">2</td>
+                        <td id="data164">125</td>
+                        <td id="data165">250</td>
+                    </tr>
+                    <tr id="row18">
+                        <td id="data171">17</td>
+                        <td id="data172">Água</td>
+                        <td id="data173">4</td>
+                        <td id="data174">85</td>
+                        <td id="data175">340</td>
+                    </tr>
+                    <tr id="row19">
+                       <td id="data181">18</td>
+                        <td id="data182">Óleo de Soja</td>
+                        <td id="data183">1</td>
+                        <td id="data184">600</td>
+                        <td id="data185">600</td>
+                    </tr>
+                    <tr id="row20">
+                        <td id="data191">19</td>
+                        <td id="data192">Cerveja</td>
+                        <td id="data193">2</td>
+                        <td id="data194">125</td>
+                        <td id="data195">250</td>
+                    </tr>
+                    <tr id="row21">
+                        <td id="data201">20</td>
+                        <td id="data202">Água</td>
+                        <td id="data203">4</td>
+                        <td id="data204">85</td>
+                        <td id="data205">340</td>
+                    </tr>
+                    
                 </table>   
             </section>
-        </div>
+            <!--<h2 id='test'>Testando o apagamento de elementos</h2>-->
+            <button type="button" onclick="not_selected_items()">Show All Items</button>
+        </div><hr>
+        
+        <div>
+            <section id="client_check_out_balance">
+                <h2>Balanço da encomenda feita</h2>
+                <div>Total Order Value:</div><input type="text" id="total_order">
+                <div>Delivery Services fee(<span id="percent">15</span>%):</div><input type="text" id="service_fee_percent">
+                <div>Total Bill:</div><input type="number" id="total_bill" value='10'>
+            </section>
+        </div><hr>
+        
+        <!-- Nota de Encomenda Verificada pelo Cliente -->
+       <div id="verif_encomenda">
+           <!-- Identificação de Cliente -->
+           <!--<h1>Cliente:</h1>-->
+           <p id="nome_completo_cliente"></p>
+           <p id="tlm_num_cliente"></p><br>
+           <hr>
+           
+           <!-- Endereço de Entrega -->
+           <p id="endereço_entrega"></p><br>
+                      
+           <!-- Hora + Dia de Entrega -->
+           <p id="hora_entrega"></p><br>
+           
+           
+           <!-- Forma de Pagamento -->
+           <p id="pagamento_por"></p><br>
+           <hr>
+           
+           <!-- Tabela dos Produtos Encomendados -->
+           <div class="tabela">
+               <!-- 0ª Linha da Tabela -->
+               <div class="tabela">
+                    <div class="tabela" id="item_num_name" style="display:inline-table; width:3%;">Item#</div>
+                    <div class="tabela" id="item_description_name" style="display:inline-table; width:6%;">Description</div>
+                    <div class="tabela" id="item_qtity_name" style="display:inline-table; width:3%">Qty</div>
+                    <div class="tabela" id="item_unit_price_name" style="display:inline-table; width:5%">Unit Price</div>
+                    <div class="tabela" id="item_total_price_name" style="display:inline-table; width:6%">Total Price</div>
+               </div>
+               <!-- 1ª Linha da Tabela -->
+               <div class="tabela">
+                    <div class="tabela" id="item_num01" style="display:inline-table; width:3%;">1</div>
+                    <div class="tabela" id="item_description01" style="display:inline-table; width:6%;">Cerveja</div>
+                    <div class="tabela" id="item_qtity01" style="display:inline-table; width:3%">6</div>
+                    <div class="tabela" id="item_unit_price01" style="display:inline-table; width:5%">120</div>
+                    <div class="tabela" id="item_total_price01" style="display:inline-table; width:6%">720</div>
+               </div>
+               <!-- 2ª Linha da Tabela -->
+               <div class="tabela">
+                    <div class="tabela" id="item_num02" style="display:inline-table; width:3%;">2</div>
+                    <div class="tabela" id="item_description02" style="display:inline-table; width:6%;">Água</div>
+                    <div class="tabela" id="item_qtity02" style="display:inline-table; width:3%">1</div>
+                    <div class="tabela" id="item_unit_price02" style="display:inline-table; width:5%">85</div>
+                    <div class="tabela" id="item_total_price02" style="display:inline-table; width:6%">85</div>
+               </div>
+           </div>
+       </div>
+        
+        <script>
+            function not_selected_items(){
+                var bill_order_value=0;
+            
+                //Check if element was selected
+                if (document.getElementById("check_data11").checked === false){
+                document.getElementById("row2").style.display="none";
+                }else{
+                    bill_order_value = bill_order_value + Number(document.getElementById("data15").value);//document.getElementById("data14").value;
+             
+                }
+                if (document.getElementById("check_data21").checked === false){
+                document.getElementById("row3").style.display="none";
+                }else{
+                    bill_order_value = bill_order_value + Number(document.getElementById("data25").value);//document.getElementById("data14").value;
+             
+                }
+                
+                document.getElementById("total_bill").value =bill_order_value;//document.getElementById("data14").value;
+                
+                //Apresentar nota de encomenda verificada
+                document.getElementById("verif_encomenda").style.display="none";
+                
+            }           
+       </script>
+       
+       
     </body>
 </html>

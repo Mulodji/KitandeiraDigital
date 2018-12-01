@@ -22,6 +22,25 @@ and open the template in the editor.
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="KD_css.css">
          <link rel="stylesheet" href="w3.css">
+        <style>
+            div#main{position: fixed;
+            top: 0%;
+            left: 0%;
+            width:100%;
+            }
+            #front_image{
+                position: absolute;
+                top:0%;
+                left:0%;
+                z-index: -1;
+            }
+            #user_icon{
+                position: absolute;
+                top:0%;
+                right:0%;
+                z-index: 1;
+            }
+        </style>
         
     </head>
     <body onpageshow="get_userInfo()">
@@ -48,17 +67,19 @@ and open the template in the editor.
             <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
             <label id="saudacao">Bem Vindo: </label><h3 id="user_name">Saudações da Equipa TICNES !!!</h3>
             
-            <a href="ajuda.html#encomend" class="w3-bar-item w3-button">Comprar </a>
-            <a href="https://m.me/ticnes" class="fb-msg-btn" target="_blank">Envie-nos Sugestões <br> ou <br>Informações de novos preços</a>
-            <a href="ajuda.html" class="w3-bar-item w3-button">Precisa de Ajuda ? </a>
+            <a href="compras.html" class="w3-bar-item w3-button">Fazer Encomenda de Artigos</a>
+            <a href="EnviarRecibo_1.html" class="w3-bar-item w3-button">Enviar Recibos - Fatura com Facturas</a>
+            <a href="https://m.me/ticnes" class="fb-msg-btn" target="_blank">Enviar as suas Sugestões</a>
+            <a href="ajuda.html" class="w3-bar-item w3-button">Informações da Plataforma</a>
             <!--<br><h4 id="sign_out" onclick="discon_user()" style="cursor:pointer"><strong>SIGN OUT / Desligar !</strong></h4>-->
-            <a href="" class="w3-bar-item w3-button" id="sign_out" onclick="discon_user()" style="cursor:pointer">SIGN OUT / Desligar !</a>
+            <a href="" class="w3-bar-item w3-button" id="sign_out" onclick="discon_user()" style="cursor:pointer">Desligar Sessão</a>
         </div>
         
 
         <div id="main">
 
             <div class="w3-teal">
+            
                 <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
                 <!--<div class="w3-container w3-center">
                     <h1>Cesta Básica Angola</h1>
@@ -67,7 +88,12 @@ and open the template in the editor.
                     <h3>OS MELHORES PREÇOS</h3>
                     <h4>Estão AQUI...!</h4>
                 </div>-->
-            </div>
+                    <!--<img id="front_image" src="Banner_Principal_v2.png" alt="Novo Banner" style="width:100%; height:auto; margin-bottom:0px; margin-top:0px;" onclick="pos_1_data()">-->
+                    <img id="user_icon" src="default_avatar.png" alt="Avatar" class="w3-right w3-circle w3-margin-right" style="width:60px; height:auto;">
+                    <!--<img id="user_icon" src="JJC_icon_foto.png" alt="Avatar" class="w3-right w3-circle w3-margin-right" style="width:10%; height:auto;">-->
+            </div><br><br><br><br>
+            
+           
             <!--<img src="copo_de_agua.jpg" alt="Copo de água" style="width:100%">-->
            <!-- <div class="fb-messengermessageus" 
                  messenger_app_id="245237032697050" 
@@ -77,6 +103,8 @@ and open the template in the editor.
             </div>-->
             
         </div>
+        
+        <br><br>
         <!-- 1ª Linha --> 
         <div class="w3-row-padding w3-margin-top" style="width:100%">
            
@@ -86,7 +114,7 @@ and open the template in the editor.
                 <div class="w3-container">
                     <h5 id="first">Cerveja</h5>
                     <!--<input type="button" onclick="alert('Hello World!')" value="?">-->
-                    <input type="checkbox" style=visibility: hidden>
+                    <input type="checkbox" style="visibility:hidden">
                 </div>
             </div>
         </div>

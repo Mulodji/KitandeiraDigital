@@ -11,48 +11,53 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" type="text/css" href="KD_css.css">
+        <!--<link rel="stylesheet" href="w3.css">-->
     </head>
     <body>
-        <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+        <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar" onclick="get_userInfo()">
             <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
-            <a href="#" class="w3-bar-item w3-button">Bem Vindo:...!</a>
-            <a href="#" class="w3-bar-item w3-button">Consultar Saldo</a>
-            <a href="#" class="w3-bar-item w3-button">Comprar Produtos</a>
-            <a href="#" class="w3-bar-item w3-button">Enviar Informação de NOVOS PREÇOS !</a>
-            <a href="#" class="w3-bar-item w3-button">Enviar Sugestões</a>
+            <ul>
+                <li><a href="ajuda.html#manual" class="w3-bar-item w3-button w3-text-blue"><strong>Manual de Utilização - Ajuda !</strong> </a></li>
+                <li><a href="ajuda.html#intro" class="w3-bar-item w3-button w3-text-blue"><strong>Introdução ao sistema: Cesta Básica Angola</strong></a></li>
+                <li><a href="ajuda.html#perfil" class="w3-bar-item w3-button w3-text-blue"><strong>Perfil de Cliente</strong></a></li>
+                <li><a href="ajuda.html#manut" class="w3-bar-item w3-button w3-text-blue"><strong>Manutenção / Alteração do Perfil de Cliente</strong></a></li>
+                <li><a href="ajuda.html#regist" class="w3-bar-item w3-button w3-text-blue"><strong>Registo de Cliente</strong></a></li>
+                <li><a href="ajuda.html#prec" class="w3-bar-item w3-button w3-text-blue"><strong>Taxa de Serviço + Preçário</strong></a></li>
+                <li><a href="compras.html" class="w3-bar-item w3-button w3-text-blue"><strong>Encomendar Produtos</strong></a></li>
+                <li><a href="ajuda.html#fidel" class="w3-bar-item w3-button w3-text-blue"><strong>Fidelização de Clientes</strong></a></li>
+                <li><a href="Simulador_1.html" class="w3-bar-item w3-button w3-text-blue"><strong>Calculadora de Poupanças </strong></a></li>
+                <li><a href="pagina_acesso_EnviarFacturas.html" class="w3-bar-item w3-button w3-text-blue"><strong>Enviar Recibos - Fatura com Facturas</strong></a></li>
+            </ul>
         </div>
 
         <div id="main">
 
-            <div class="w3-teal">
-                <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
-                <div class="w3-container w3-center">
-                    <h1>Cesta Básica Angola</h1>
-                    <!--<h4>Aqui... Levamos para si</h4>-->
-                    <h1>-</h1>
-                    <h3>OS MELHORES PREÇOS !!!</h3>
-                    <h4>Estão AQUI...</h4>
+            <div>
+                <button id="openNav" class="w3-button w3-xlarge" onclick="w3_open()">&#9776;</button>
+                <div class="w3-container w3-center" style="width:100%">
+                    <img src="Banner_Principal_v2.png" alt="Novo Banner" style="width:100%; height:auto; margin-bottom:0px; margin-top:0px;" onclick="pos_1_data()">
                 </div>
             </div>
-            <!--<img src="copo_de_agua.jpg" alt="Copo de água" style="width:100%">-->
+          
             
             
         </div>
         <!-- 1ª Linha --> 
-        <div class="w3-row-padding w3-margin-top" style="width:100%">
+        <div class="w3-row-padding" style="width:100%">
            
-        <div class="w3-quarter">
-            <div class="w3-card-4">
-                <img src="beer_pouring_03.jpg" style="width:100%" onclick="pos_1_data()">
-                <div class="w3-container">
+        <div class="w3-quarter w3-round-xlarge">
+            <div class="w3-card-4 w3-round-xlarge">
+                <img src="beer_pouring_03.jpg" class="w3-round-xlarge" alt="cerveja" style="width:100%;" onclick="pos_1_data()">
+                <div class="w3-container w3-round-xlarge">
                     <h5 id="first">Cerveja</h5>
                 </div>
             </div>
         </div>
 
         <div class="w3-quarter">
-            <div class="w3-card-4">
-                <img src="copo_de_agua.jpg" style="width:100%" onclick="pos_2_data()">
+            <div class="w3-card-4 w3-round-xlarge">
+                <img src="copo_de_agua.jpg" class="w3-round-xlarge" alt="água" style="width:100%" onclick="pos_2_data()">
                 <div class="w3-container">
                     <h5 id="second">Água</h5>
                 </div>
@@ -60,8 +65,8 @@ and open the template in the editor.
         </div>
 
         <div class="w3-quarter">
-            <div class="w3-card-4">
-                <img src="soja.jpg" style="width:100%" onclick="pos_3_data()">
+            <div class="w3-card-4 w3-round-xlarge">
+                <img src="soja.jpg" class="w3-round-xlarge" alt="oleo de soja" style="width:100%" onclick="pos_3_data()">
                 <div class="w3-container">
                     <h5 id="third">Óleo de Soja</h5>
                 </div>
@@ -69,8 +74,8 @@ and open the template in the editor.
         </div>
         
         <div class="w3-quarter">
-            <div class="w3-card-4">
-                <img src="palm_oil.jpg" style="width:100%" onclick="pos_4_data()">
+            <div class="w3-card-4 w3-round-xlarge">
+                <img src="palm_oil.jpg" class="w3-round-xlarge" alt="oleo de palma" style="width:100%" onclick="pos_4_data()">
                 <div class="w3-container w3-center">
                     <h5 id="fourth">Óleo de Palma</h5>
                 </div>
@@ -82,8 +87,8 @@ and open the template in the editor.
         <div class="w3-row-padding w3-margin-top" style="width:100%" >
            
         <div class="w3-quarter">
-            <div class="w3-card-4">
-                <img src="leite003.jpg" style="width:100%" onclick="pos_5_data()">
+            <div class="w3-card-4 w3-round-xlarge">
+                <img src="leite003.jpg" class="w3-round-xlarge" alt="leite" style="width:100%" onclick="pos_5_data()">
                 <div class="w3-container">
                     <h5 id="fifth">Leite</h5>
                 </div>
@@ -91,8 +96,8 @@ and open the template in the editor.
         </div>
 
         <div class="w3-quarter">
-            <div class="w3-card-4">
-                <img src="bread.jpg" style="width:100%" onclick="pos_6_data()">
+            <div class="w3-card-4 w3-round-xlarge">
+                <img src="bread.jpg" class="w3-round-xlarge" alt="pao" style="width:100%" onclick="pos_6_data()">
                 <div class="w3-container">
                     <h5 id="sixth">Pão</h5>
                 </div>
@@ -100,8 +105,8 @@ and open the template in the editor.
         </div>
 
         <div class="w3-quarter">
-            <div class="w3-card-4">
-                <img src="acucar02.jpg" style="width:100%" onclick="pos_7_data()">
+            <div class="w3-card-4 w3-round-xlarge">
+                <img src="acucar02.jpg" class="w3-round-xlarge" alt="açucar" style="width:100%" onclick="pos_7_data()">
                 <div class="w3-container">
                     <h5 id="seventh">Açucar</h5>
                 </div>
@@ -109,8 +114,8 @@ and open the template in the editor.
         </div>
         
         <div class="w3-quarter">
-            <div class="w3-card-4">
-                <img src="ovos03.jpg" style="width:100%" onclick="pos_8_data()">
+            <div class="w3-card-4 w3-round-xlarge">
+                <img src="ovos03.jpg" class="w3-round-xlarge" alt="ovo" style="width:100%" onclick="pos_8_data()">
                 <div class="w3-container w3-center">
                     <h5 id="eighth">Ovos</h5>
                 </div>
@@ -122,8 +127,8 @@ and open the template in the editor.
         <div class="w3-row-padding w3-margin-top" style="width:100%">
            
         <div class="w3-quarter">
-            <div class="w3-card-4">
-                <img src="wheat_flour.jpg" style="width:100%" onclick="pos_9_data()">
+            <div class="w3-card-4 w3-round-xlarge">
+                <img src="wheat_flour.jpg" class="w3-round-xlarge" alt="farinha de trigo" style="width:100%" onclick="pos_9_data()">
                 <div class="w3-container">
                     <h5 id="nineth">Farinha de Trigo</h5>
                 </div>
@@ -131,8 +136,8 @@ and open the template in the editor.
         </div>
 
         <div class="w3-quarter">
-            <div class="w3-card-4">
-                <img src="salt02.jpg" style="width:100%" onclick="pos_10_data()">
+            <div class="w3-card-4 w3-round-xlarge">
+                <img src="salt02.jpg" class="w3-round-xlarge" alt="sal" style="width:100%" onclick="pos_10_data()">
                 <div class="w3-container">
                     <h5 id="tenth">Sal</h5>
                 </div>
@@ -141,7 +146,7 @@ and open the template in the editor.
 
         <div class="w3-quarter">
             <div class="w3-card-4">
-                <img src="arroz.jpg" style="width:100%" onclick="pos_11_data()">
+                <img src="arroz.jpg" class="w3-round-xlarge" alt="arroz" style="width:100%" onclick="pos_11_data()">
                 <div class="w3-container">
                     <h5 id="eleventh">Arroz</h5>
                 </div>
@@ -149,8 +154,8 @@ and open the template in the editor.
         </div>
         
         <div class="w3-quarter">
-            <div class="w3-card-4">
-                <img src="massa_alimentar.jpg" style="width:100%" onclick="pos_12_data()">
+            <div class="w3-card-4 w3-round-xlarge">
+                <img src="massa_alimentar.jpg" class="w3-round-xlarge" alt="massa alimentar" style="width:100%" onclick="pos_12_data()">
                 <div class="w3-container w3-center">
                     <h5 id="twelveth">Massa</h5>
                 </div>
@@ -162,8 +167,8 @@ and open the template in the editor.
         <div class="w3-row-padding w3-margin-top" style="width:100%">
            
         <div class="w3-quarter">
-            <div class="w3-card-4">
-                <img src="feijao.jpg" style="width:100%" onclick="pos_13_data()">
+            <div class="w3-card-4 w3-round-xlarge">
+                <img src="feijao.jpg" class="w3-round-xlarge" alt="feijao" style="width:100%" onclick="pos_13_data()">
                 <div class="w3-container">
                     <h5 id="thirteenth">Feijão</h5>
                 </div>
@@ -172,7 +177,7 @@ and open the template in the editor.
 
         <div class="w3-quarter">
             <div class="w3-card-4">
-                <img src="frozen_whole_chicken_1.jpg" style="width:100%" onclick="pos_14_data()">
+                <img src="frozen_whole_chicken_1.jpg" class="w3-round-xlarge" alt="frango" style="width:100%" onclick="pos_14_data()">
                 <div class="w3-container">
                     <h5 id="fourteenth">Frango</h5>
                 </div>
@@ -180,8 +185,8 @@ and open the template in the editor.
         </div>
 
         <div class="w3-quarter">
-            <div class="w3-card-4">
-                <img src="fish_selection_02.jpeg" style="width:100%" onclick="pos_15_data()">
+            <div class="w3-card-4 w3-round-xlarge">
+                <img src="fish_selection_02.jpeg" class="w3-round-xlarge" alt="peixe" style="width:100%" onclick="pos_15_data()">
                 <div class="w3-container">
                     <h5 id="fifteenth">Peixe</h5>
                 </div>
@@ -189,8 +194,8 @@ and open the template in the editor.
         </div>
         
         <div class="w3-quarter">
-            <div class="w3-card-4">
-                <img src="carne_seca.jpg" style="width:100%" onclick="pos_16_data()">
+            <div class="w3-card-4 w3-round-xlarge">
+                <img src="carne_seca.jpg" class="w3-round-xlarge" alt="carne seca" style="width:100%" onclick="pos_16_data()">
                 <div class="w3-container w3-center">
                     <h5 id="sixteenth">Carne Seca</h5>
                 </div>
@@ -202,8 +207,8 @@ and open the template in the editor.
         <div class="w3-row-padding w3-margin-top" style="width:100%">
            
         <div class="w3-quarter">
-            <div class="w3-card-4">
-                <img src="farinha_de_milho.jpg" style="width:100%" onclick="pos_17_data()">
+            <div class="w3-card-4 w3-round-xlarge">
+                <img src="farinha_de_milho.jpg" class="w3-round-xlarge" alt="fuba de milho" style="width:100%" onclick="pos_17_data()">
                 <div class="w3-container">
                     <h5 id="seventeenth">Fuba de Milho</h5>
                 </div>
@@ -211,8 +216,8 @@ and open the template in the editor.
         </div>
 
         <div class="w3-quarter">
-            <div class="w3-card-4">
-                <img src="farinha_de_mandioca.jpg" style="width:100%" onclick="pos_18_data()">
+            <div class="w3-card-4 w3-round-xlarge">
+                <img src="farinha_de_mandioca.jpg" class="w3-round-xlarge" alt="fuba de mandioca" style="width:100%" onclick="pos_18_data()">
                 <div class="w3-container">
                     <h5 id="eighteenth">Fuba de Mandioca</h5>
                 </div>
@@ -220,8 +225,8 @@ and open the template in the editor.
         </div>
 
         <div class="w3-quarter">
-            <div class="w3-card-4">
-                <img src="pasta_dentrifica.jpg" style="width:100%" onclick="pos_19_data()">
+            <div class="w3-card-4 w3-round-xlarge">
+                <img src="pasta_dentrifica.jpg" class="w3-round-xlarge" alt="pasta dentrifica" style="width:100%" onclick="pos_19_data()">
                 <div class="w3-container">
                     <h5 id="nineteenth">Pasta de Dente</h5>
                 </div>
@@ -229,13 +234,27 @@ and open the template in the editor.
         </div>
         
         <div class="w3-quarter">
-            <div class="w3-card-4">
-                <img src="sabao_em_barra.jpg" style="width:100%" onclick="pos_20_data()">
+            <div class="w3-card-4 w3-round-xlarge">
+                <img src="sabao_em_barra.jpg" class="w3-round-xlarge" alt="sabao em barra" style="width:100%" onclick="pos_20_data()">
                 <div class="w3-container w3-center">
                     <h5 id="twentyth">Sabao em Barra</h5>
                 </div>
             </div>
         </div>
+            
+        
+        
+        </div>
+        <!-- Footer -->
+        <div class="w3-container w3-mobile w3-center" style="width:100%">
+            <footer>
+                <ul>
+                    <li><a href="https://ticnes.com">&#169;2018 TICNES Lda. Todos os Direitos Reservados</a></li>
+                    <li><a href="Privacy_Policy_CBA_PT.html">Privacidade</a></li>
+                    <li><a href="Termos_de_Serviço_CBA.html">Termos e Condições</a></li>
+                    <li><a href="mailto://info@ticnes.com">Contacto</a></li>
+                </ul>
+            </footer>
         </div>
 
 
@@ -359,83 +378,83 @@ and open the template in the editor.
             function pos_1_data(){
              
              //window.open("registered_user.html");
-             window.open("pos01_data.html");
+             window.open("pagina_acesso.html");
             }
             function pos_2_data(){
                 
-             window.open("pos02_data.html");
+             window.open("pagina_acesso.html");
              //window.open("404.html");
             }
             function pos_3_data(){
-            window.open("pos03_data.html");
+            window.open("pagina_acesso.html");
             // window.open("404.html");
             }
             function pos_4_data(){
-             window.open("pos04_data.html");
+             window.open("pagina_acesso.html");
              //window.open("404.html");
             }
             function pos_5_data(){
-            window.open("pos05_data.html");
+            window.open("pagina_acesso.html");
             // window.open("404.html");
             }
             function pos_6_data(){
-           window.open("pos06_data.html");
+           window.open("pagina_acesso.html");
            //  window.open("404.html");
             }
             function pos_7_data(){
-            window.open("pos07_data.html");
+            window.open("pagina_acesso.html");
              //window.open("404.html");
             }
             function pos_8_data(){
-            window.open("pos08_data.html");
+            window.open("pagina_acesso.html");
              //window.open("404.html");
             }
             function pos_9_data(){
-            window.open("pos09_data.html");
+            window.open("pagina_acesso.html");
              //window.open("404.html");
             }
             function pos_10_data(){
-             window.open("pos10_data.html");
+             window.open("pagina_acesso.html");
              //window.open("404.html");
             }
             function pos_11_data(){
-            window.open("pos11_data.html");
+            window.open("pagina_acesso.html");
              //window.open("404.html");
             }
             function pos_12_data(){
-            window.open("pos12_data.html");
+            window.open("pagina_acesso.html");
              //window.open("404.html");
                          }
             function pos_13_data(){
-            window.open("pos13_data.html");
+            window.open("pagina_acesso.html");
              //window.open("404.html");
             }
             function pos_14_data(){
-            window.open("pos14_data.html");
+            window.open("pagina_acesso.html");
              //window.open("404.html");
             }
             function pos_15_data(){
-            window.open("pos15_data.html");
+            window.open("pagina_acesso.html");
              //window.open("404.html");
             }
             function pos_16_data(){
-            window.open("pos16_data.html");
+            window.open("pagina_acesso.html");
              //window.open("404.html");
             }
             function pos_17_data(){
-             window.open("pos17_data.html");
+             window.open("pagina_acesso.html");
              //window.open("404.html");
             }
             function pos_18_data(){
-             window.open("pos18_data.html");
+             window.open("pagina_acesso.html");
              
             }
             function pos_19_data(){
-             window.open("pos19_data.html");
+             window.open("pagina_acesso.html");
              //window.open("404.html");
             }
             function pos_20_data(){
-            window.open("pos20_data.html");
+            window.open("pagina_acesso.html");
              //window.open("404.html");
             }
         </script>

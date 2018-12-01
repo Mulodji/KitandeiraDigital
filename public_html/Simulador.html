@@ -21,257 +21,281 @@ and open the template in the editor.
     <body>
         <!-- Apresentação de Interface para escolha de productos -->
         <!-- Tabela de Productos -->
-        <div class="w3-responsive" style="width:85%">
+        <div class="w3-container w3-responsive">
         <table class="w3-table w3-centered"> <!-- style="width:70%;"> <!--id="table_simul">-->
             <caption>Tabela de Comparação & Ganhos</caption>
             <tr>
                 <th>Item#</th>
                 <th>Nome</th>
                 <th>Escolha</th>
-                <th style="width: 10px;">Preço(UN)</th>
-                <th style="width: 10px;">Qtd</th>
-                <!--<th style="width: 10px;">Total P(Kz)</th>-->
-                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
-                <!--<th>Total Prod. CBA(Kz)</th>-->
+                <th>Preço(UN)</th>
+                <th>Qtd</th>
+                <th>Total P(Kz)</th>
+                <th></th>
+                <th>Preço_CBA(UN)</th>
+                <th>Total Prod. CBA(Kz)</th>
                 <th style="color:green;">GANHO CBA(Kz)</th>
             </tr>
             
             <tr>
                 <td>1</td>
                 <td>Cerveja</td>
-                <td><input type="checkbox" name="first_item_user_select"></td>
-                <td><input type="number" min="0" max="1000" name="first_item_price" step="0.10" value="0"></td>
-                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
-                <!--<th style="width: 10px;">Total P(Kz)</th>-->
-                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                
-                <td><input type="text" name="CBA_first_item_total_gain"></td>
+                <td><input type="checkbox" name="chk1" id="first_item_user_select"></td>
+                <td><input type="number" min="0" max="10000" id="first_item_price" step="0.10" value="0"></td>
+                <td><input type="number" min="0" max="100" id="first_item_quantity" step="1" value="0"></td>
+                <td><input type="text" name="first_item_total_price" id="pTotal_01"></td>
+                <td></td>
+                <td><input type="text" name="CBA_first_item_price" id="pUN_cba_01"></td>
+                <td><input type="text" name="CBA_first_item_total_price" id="pTotal_cba_01"></td>
+                <td><input type="text" name="CBA_first_item_total_gain" id="pGain_cba_01"></td>
             </tr>
+            
             
             <tr>
                 <td>2</td>
                 <td>Água</td>
-                <td><input type="checkbox" name="second_item_user_select"></td>
-                <td><input type="number" min="0" max="1000" name="second_item_price" step="0.10" value="0"></td>
-                <td><input type="number" min="0" max="100" name="second_item_quanity" step="1" value="0"></td>
-                <!--<th style="width: 10px;">Total P(Kz)</th>-->
+                <td><input type="checkbox" name="chk2" id="second_item_user_select"></td>
+                <td><input type="number" min="0" max="10000" id="second_item_price" step="0.10" value="0"></td>
+                <td><input type="number" min="0" max="100" id="second_item_quantity" step="1" value="0"></td>
+                <td><input type="text" name="second_item_total_price" id="pTotal_02"></td>
                 <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                
-                <td><input type="text" name="CBA_second_item_total_gain"></td>
+                <td><input type="text" name="CBA_second_item_price" id="pUN_cba_02"></td>
+                <td><input type="text" name="CBA_second_item_total_price" id="pTotal_cba_02"></td>
+                <td><input type="text" name="CBA_second_item_total_gain" id="pGain_cba_02"></td>
             </tr>
             
             <tr>
                 <td>3</td>
                 <td>Óleo de Soja</td>
-                <td><input type="checkbox" name="third_item_user_select"></td>
-                <td><input type="number" min="0" max="1000" name="third_item_price" step="0.10" value="0"></td>
-                <td><input type="number" min="0" max="100" name="third_item_quanity" step="1" value="0"></td>
-                <!--<th style="width: 10px;">Total P(Kz)</th>-->
+                <td><input type="checkbox" name="chk3" id="third_item_user_select"></td>
+                <td><input type="number" min="0" max="10000" id="third_item_price" step="0.10" value="0"></td>
+                <td><input type="number" min="0" max="100" id="third_item_quantity" step="1" value="0"></td>
+               <td><input type="text" name="third_item_total_price" id="pTotal_03"></td>
                 <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
-                
-                <td><input type="text" name="CBA_third_item_total_gain"></td>
+                <td><input type="text" name="CBA_third_item_price" id="pUN_cba_03"></td>
+                <td><input type="text" name="CBA_third_item_total_price" id="pTotal_cba_03"></td>
+                <td><input type="text" name="CBA_third_item_total_gain" id="pGain_cba_03"></td>
             </tr>
             
             <tr>
                <td>4</td> 
                 <td>Óleo de Palma</td>
-                <td><input type="checkbox" name="fourth_item_user_select"></td>
-                <td><input type="number" min="0" max="1000" name="fourth_item_price" step="0.10" value="0"></td>
-                <td><input type="number" min="0" max="100" name="fourth_item_quanity" step="1" value="0"></td>
-                <!--<th style="width: 10px;">Total P(Kz)</th>-->
-                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
-               
-                <td><input type="text" name="CBA_fourth_item_total_gain"></td>
+                <td><input type="checkbox" name="chk4" id="fourth_item_user_select"></td>
+                <td><input type="number" min="0" max="10000" id="fourth_item_price" step="0.10" value="0"></td>
+                <td><input type="number" min="0" max="100" id="fourth_item_quantity" step="1" value="0"></td>
+                <td><input type="text" name="fourth_item_total_price" id="pTotal_04"></td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td><input type="text" name="CBA_fourth_item_price" id="pUN_cba_04"></td>
+                <td><input type="text" name="CBA_fourth_item_total_price" id="pTotal_cba_04"></td>
+                <td><input type="text" name="CBA_fourth_item_total_gain" id="pGain_cba_04"></td>
             </tr>
             
             <tr>
                 <td>5</td>
                 <td>Leite</td>
-                <td><input type="checkbox" name="first_item_user_select"></td>
-                <td><input type="number" min="0" max="100000" name="first_item_price" step="0.50" value="0"></td>
-                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
-                <!--<th style="width: 10px;">Total P(Kz)</th>-->
-                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
-                
-                <td><input type="text" name="CBA_first_item_total_gain"></td>
+                <td><input type="checkbox" name="chk5" id="fifth_item_user_select"></td>
+                <td><input type="number" min="0" max="10000" id="fifth_item_price" step="0.10" value="0"></td>
+                <td><input type="number" min="0" max="100" id="fifth_item_quantity" step="1" value="0"></td>
+                <td><input type="text" name="fifth_item_total_price" id="pTotal_05"></td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td><input type="text" name="CBA_fifth_item_price" id="pUN_cba_05"></td>
+                <td><input type="text" name="CBA_fifth_item_total_price" id="pTotal_cba_05"></td>
+                <td><input type="text" name="CBA_fifth_item_total_gain" id="pGain_cba_05"></td>
             </tr>
             
             <tr>
                 <td>6</td>
                 <td>Pão</td>
-                <td><input type="checkbox" name="first_item_user_select"></td>
-                <td><input type="number" min="0" max="100000" name="first_item_price" step="0.50" value="0"></td>
-                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
-                <!--<th style="width: 10px;">Total P(Kz)</th>-->
-                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
-                
-                <td><input type="text" name="CBA_first_item_total_gain"></td>
+                <td><input type="checkbox" name="chk6" id="sixth_item_user_select"></td>
+                <td><input type="number" min="0" max="10000" id="sixth_item_price" step="0.10" value="0"></td>
+                <td><input type="number" min="0" max="100" id="sixth_item_quantity" step="1" value="0"></td>
+                <td><input type="text" name="sixth_item_total_price" id="pTotal_06"></td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td><input type="text" name="CBA_sixth_item_price" id="pUN_cba_06"></td>
+                <td><input type="text" name="CBA_sixth_item_total_price" id="pTotal_cba_06"></td>
+                <td><input type="text" name="CBA_sixth_item_total_gain" id="pGain_cba_06"></td>
             </tr>
             
             <tr>
                 <td>7</td>
                 <td>Açucar</td>
-                <td><input type="checkbox" name="first_item_user_select"></td>
-                <td><input type="number" min="0" max="100000" name="first_item_price" step="0.50" value="0"></td>
-                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
-                <!--<th style="width: 10px;">Total P(Kz)</th>-->
-                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
-               
-                <td><input type="text" name="CBA_first_item_total_gain"></td>
+                <td><input type="checkbox" name="chk7" id="seventh_item_user_select"></td>
+                <td><input type="number" min="0" max="10000" id="seventh_item_price" step="0.10" value="0"></td>
+                <td><input type="number" min="0" max="100" id="seventh_item_quantity" step="1" value="0"></td>
+                <td><input type="text" name="seventh_item_total_price" id="pTotal_07"></td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td><input type="text" name="CBA_seventh_item_price" id="pUN_cba_07"></td>
+                <td><input type="text" name="CBA_seventh_item_total_price" id="pTotal_cba_07"></td>
+                <td><input type="text" name="CBA_seventh_item_total_gain" id="pGain_cba_07"></td>
             </tr>
             
             <tr>
                 <td>8</td>
                 <td>Ovos</td>
-                <td><input type="checkbox" name="first_item_user_select"></td>
-                <td><input type="number" min="0" max="100000" name="first_item_price" step="0.50" value="0"></td>
-                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
-                <!--<th style="width: 10px;">Total P(Kz)</th>-->
-                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
-               
-                <td><input type="text" name="CBA_first_item_total_gain"></td>
+                <td><input type="checkbox" name="chk8" id="eigth_item_user_select"></td>
+                <td><input type="number" min="0" max="10000" id="eigth_item_price" step="0.10" value="0"></td>
+                <td><input type="number" min="0" max="100" id="eigth_item_quantity" step="1" value="0"></td>
+                <td><input type="text" name="eigth_item_total_price" id="pTotal_08"></td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td><input type="text" name="CBA_eigth_item_price" id="pUN_cba_08"></td>
+                <td><input type="text" name="CBA_eigth_item_total_price" id="pTotal_cba_08"></td>
+                <td><input type="text" name="CBA_eigth_item_total_gain" id="pGain_cba_08"></td>
             </tr>
             
             <tr>
                 <td>9</td>
                 <td>Farinha de Trigo</td>
-                <td><input type="checkbox" name="first_item_user_select"></td>
-                <td><input type="number" min="0" max="100000" name="first_item_price" step="0.50" value="0"></td>
-                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
-                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
-                
-                <td><input type="text" name="CBA_first_item_total_gain"></td>
+                 <td><input type="checkbox" name="chk9" id="nineth_item_user_select"></td>
+                <td><input type="number" min="0" max="10000" id="nineth_item_price" step="0.10" value="0"></td>
+                <td><input type="number" min="0" max="100" id="nineth_item_quantity" step="1" value="0"></td>
+                <td><input type="text" name="nineth_item_total_price" id="pTotal_09"></td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td><input type="text" name="CBA_nineth_item_price" id="pUN_cba_09"></td>
+                <td><input type="text" name="CBA_nineth_item_total_price" id="pTotal_cba_09"></td>
+                <td><input type="text" name="CBA_nineth_item_total_gain" id="pGain_cba_09"></td>
             </tr>
             
             <tr>
                 <td>10</td>
                 <td>Sal</td>
-                <td><input type="checkbox" name="first_item_user_select"></td>
-                <td><input type="number" min="0" max="100000" name="first_item_price" step="0.50" value="0"></td>
-                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
-                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
-               
-                <td><input type="text" name="CBA_first_item_total_gain"></td>
+                <td><input type="checkbox" name="chk10" id="tenth_item_user_select"></td>
+                <td><input type="number" min="0" max="10000" id="tenth_item_price" step="0.10" value="0"></td>
+                <td><input type="number" min="0" max="100" id="tenth_item_quantity" step="1" value="0"></td>
+                <td><input type="text" name="tenth_item_total_price" id="pTotal_10"></td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td><input type="text" name="CBA_tenth_item_price" id="pUN_cba_10"></td>
+                <td><input type="text" name="CBA_tenth_item_total_price" id="pTotal_cba_10"></td>
+                <td><input type="text" name="CBA_tenth_item_total_gain" id="pGain_cba_10"></td>
             </tr>
             
             <tr>
                 <td>11</td>
                 <td>Arroz</td>
-                <td><input type="checkbox" name="first_item_user_select"></td>
-                <td><input type="number" min="0" max="100000" name="first_item_price" step="0.50" value="0"></td>
-                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
-                
-                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
-                
-                <td><input type="text" name="CBA_first_item_total_gain"></td>
+                <td><input type="checkbox" name="chk11" id="eleventh_item_user_select"></td>
+                <td><input type="number" min="0" max="10000" id="eleventh_item_price" step="0.10" value="0"></td>
+                <td><input type="number" min="0" max="100" id="eleventh_item_quantity" step="1" value="0"></td>
+                <td><input type="text" name="eleventh_item_total_price" id="pTotal_11"></td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td><input type="text" name="CBA_eleventh_item_price" id="pUN_cba_11"></td>
+                <td><input type="text" name="CBA_eleventh_item_total_price" id="pTotal_cba_11"></td>
+                <td><input type="text" name="CBA_eleventh_item_total_gain" id="pGain_cba_11"></td>
             </tr>
             
             <tr>
                 <td>12</td>
                 <td>Massa</td>
-                <td><input type="checkbox" name="first_item_user_select"></td>
-                <td><input type="number" min="0" max="100000" name="first_item_price" step="0.50" value="0"></td>
-                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
-               
-               <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
-                
-                <td><input type="text" name="CBA_first_item_total_gain"></td>
+               <td><input type="checkbox" name="chk12" id="twelveth_item_user_select"></td>
+                <td><input type="number" min="0" max="10000" id="twelveth_item_price" step="0.10" value="0"></td>
+                <td><input type="number" min="0" max="100" id="twelveth_item_quantity" step="1" value="0"></td>
+                <td><input type="text" name="twelveth_item_total_price" id="pTotal_12"></td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td><input type="text" name="CBA_twelveth_item_price" id="pUN_cba_12"></td>
+                <td><input type="text" name="CBA_twelveth_item_total_price" id="pTotal_cba_12"></td>
+                <td><input type="text" name="CBA_twelveth_item_total_gain" id="pGain_cba_12"></td>
             </tr>
             
             <tr>
                 <td>13</td>
                 <td>Feijão</td>
-                <td><input type="checkbox" name="first_item_user_select"></td>
-                <td><input type="number" min="0" max="100000" name="first_item_price" step="0.50" value="0"></td>
-                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
-                <!--<th style="width: 10px;">Total P(Kz)</th>-->
-                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
-                
-                <td><input type="text" name="CBA_first_item_total_gain"></td>
+                <td><input type="checkbox" name="chk13" id="thirteenth_item_user_select"></td>
+                <td><input type="number" min="0" max="10000" id="thirteenth_item_price" step="0.10" value="0"></td>
+                <td><input type="number" min="0" max="100" id="thirteenth_item_quantity" step="1" value="0"></td>
+                <td><input type="text" name="thirteenth_item_total_price" id="pTotal_13"></td>
+                <td>&nbsp;</td>
+                <td><input type="text" name="CBA_thirteenth_item_price" id="pUN_cba_13"></td>
+                <td><input type="text" name="CBA_thirteenth_item_total_price" id="pTotal_cba_13"></td>
+                <td><input type="text" name="CBA_thirteenth_item_total_gain" id="pGain_cba_13"></td>
             </tr>
             
             <tr>
                 <td>14</td>
                 <td>Frango</td>
-                <td><input type="checkbox" name="first_item_user_select"></td>
-                <td><input type="number" min="0" max="100000" name="first_item_price" step="0.50" value="0"></td>
-                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
-               
-                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
-                
-                <td><input type="text" name="CBA_first_item_total_gain"></td>
+                <td><input type="checkbox" name="chk14" id="fourteenth_item_user_select"></td>
+                <td><input type="number" min="0" max="10000" id="fourteenth_item_price" step="0.10" value="0"></td>
+                <td><input type="number" min="0" max="100" id="fourteenth_item_quantity" step="1" value="0"></td>
+                <td><input type="text" name="fourteenth_item_total_price" id="pTotal_14"></td>
+                <td>&nbsp;</td>
+                <td><input type="text" name="CBA_fourteenth_item_price" id="pUN_cba_14"></td>
+                <td><input type="text" name="CBA_fourteenth_item_total_price" id="pTotal_cba_14"></td>
+                <td><input type="text" name="CBA_fourteenth_item_total_gain" id="pGain_cba_14"></td>
             </tr>
             
             <tr>
                 <td>15</td>
                 <td>Peixe</td>
-                <td><input type="checkbox" name="first_item_user_select"></td>
-                <td><input type="number" min="0" max="100000" name="first_item_price" step="0.50" value="0"></td>
-                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
-               
-                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
-                
-                <td><input type="text" name="CBA_first_item_total_gain"></td>
+                <td><input type="checkbox" name="chk15" id="fifteenth_item_user_select"></td>
+                <td><input type="number" min="0" max="10000" id="fifteenth_item_price" step="0.10" value="0"></td>
+                <td><input type="number" min="0" max="100" id="fifteenth_item_quantity" step="1" value="0"></td>
+                <td><input type="text" name="fifteenth_item_total_price" id="pTotal_15"></td>
+                <td>&nbsp;</td>
+                <td><input type="text" name="CBA_fifteenth_item_price" id="pUN_cba_15"></td>
+                <td><input type="text" name="CBA_fifteenth_item_total_price" id="pTotal_cba_15"></td>
+                <td><input type="text" name="CBA_fifteenth_item_total_gain" id="pGain_cba_15"></td>
             </tr>
             
             <tr>
                 <td>16</td>
                 <td>Carne Seca</td>
-                <td><input type="checkbox" name="first_item_user_select"></td>
-                <td><input type="number" min="0" max="100000" name="first_item_price" step="0.50" value="0"></td>
-                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
-               
-                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
-                
-                <td><input type="text" name="CBA_first_item_total_gain"></td>
+                <td><input type="checkbox" name="chk16" id="sixteenth_item_user_select"></td>
+                <td><input type="number" min="0" max="10000" id="sixteenth_item_price" step="0.10" value="0"></td>
+                <td><input type="number" min="0" max="100" id="sixteenth_item_quantity" step="1" value="0"></td>
+                <td><input type="text" name="sixteenth_item_total_price" id="pTotal_16"></td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td><input type="text" name="CBA_sixteenth_item_price" id="pUN_cba_16"></td>
+                <td><input type="text" name="CBA_sixteenth_item_total_price" id="pTotal_cba_16"></td>
+                <td><input type="text" name="CBA_sixteenth_item_total_gain" id="pGain_cba_16"></td>
             </tr>
             
             <tr>
                 <td>17</td>
                 <td>Fuba de Milho</td>
-                <td><input type="checkbox" name="first_item_user_select"></td>
-                <td><input type="number" min="0" max="100000" name="first_item_price" step="0.50" value="0"></td>
-                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
-               
-                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
-                
-                <td><input type="text" name="CBA_first_item_total_gain"></td>
+                <td><input type="checkbox" name="chk17" id="seventeenth_item_user_select"></td>
+                <td><input type="number" min="0" max="10000" id="seventeenth_item_price" step="0.10" value="0"></td>
+                <td><input type="number" min="0" max="100" id="seventeenth_item_quantity" step="1" value="0"></td>
+                <td><input type="text" name="seventeenth_item_total_price" id="pTotal_17"></td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td><input type="text" name="CBA_seventeenth_item_price" id="pUN_cba_17"></td>
+                <td><input type="text" name="CBA_seventeenth_item_total_price" id="pTotal_cba_17"></td>
+                <td><input type="text" name="CBA_seventeenth_item_total_gain" id="pGain_cba_17"></td>
             </tr>
             
             <tr>
                 <td>18</td>
                 <td>Fuba de Mandioca</td>
-                <td><input type="checkbox" name="first_item_user_select"></td>
-                <td><input type="number" min="0" max="100000" name="first_item_price" step="0.50" value="0"></td>
-                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
-              
-                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
-               
-                <td><input type="text" name="CBA_first_item_total_gain"></td>
+                <td><input type="checkbox" name="chk18" id="eighteenth_item_user_select"></td>
+                <td><input type="number" min="0" max="10000" id="eighteenth_item_price" step="0.10" value="0"></td>
+                <td><input type="number" min="0" max="100" id="eighteenth_item_quantity" step="1" value="0"></td>
+                <td><input type="text" name="eighteenth_item_total_price" id="pTotal_18"></td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td><input type="text" name="CBA_eighteenth_item_price" id="pUN_cba_18"></td>
+                <td><input type="text" name="CBA_eighteenth_item_total_price" id="pTotal_cba_18"></td>
+                <td><input type="text" name="CBA_eighteenth_item_total_gain" id="pGain_cba_18"></td>
             </tr>
             
             <tr>
                 <td>19</td>
                 <td>Pasta Dentrífica</td>
-                <td><input type="checkbox" name="first_item_user_select"></td>
-                <td><input type="number" min="0" max="100000" name="first_item_price" step="0.50" value="0"></td>
-                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
-                
-                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
-                
-                <td><input type="text" name="CBA_first_item_total_gain"></td>
+                <td><input type="checkbox" name="chk19" id="nineteenth_item_user_select"></td>
+                <td><input type="number" min="0" max="10000" id="nineteenth_item_price" step="0.10" value="0"></td>
+                <td><input type="number" min="0" max="100" id="nineteenth_item_quantity" step="1" value="0"></td>
+                <td><input type="text" name="nineteenth_item_total_price" id="pTotal_19"></td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td><input type="text" name="CBA_nineteenth_item_price" id="pUN_cba_19"></td>
+                <td><input type="text" name="CBA_nineteenth_item_total_price" id="pTotal_cba_19"></td>
+                <td><input type="text" name="CBA_nineteenth_item_total_gain" id="pGain_cba_19"></td>
             </tr>
             
             <tr>
                 <td>20</td>
                 <td>Sabão em Barra</td>
-                <td><input type="checkbox" name="first_item_user_select"></td>
-                <td><input type="number" min="0" max="100000" name="first_item_price" step="0.50" value="0"></td>
-                <td><input type="number" min="0" max="100" name="first_item_quanity" step="1" value="0"></td>
-               
-                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
-                
-                <td><input type="text" name="CBA_first_item_total_gain"></td>
+                <td><input type="checkbox" name="chk20" id="twentieth_item_user_select"></td>
+                <td><input type="number" min="0" max="10000" id="twentieth_item_price" step="0.10" value="0"></td>
+                <td><input type="number" min="0" max="100" id="twentieth_item_quantity" step="1" value="0"></td>
+                <td><input type="text" name="twentieth_item_total_price" id="pTotal_20"></td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td><input type="text" name="CBAtwentieth_item_price" id="pUN_cba_20"></td>
+                <td><input type="text" name="CBA_twentieth_item_total_price" id="pTotal_cba_20"></td>
+                <td><input type="text" name="CBA_twentieth_item_total_gain" id="pGain_cba_20"></td>
             </tr>
             <tr>
                 <td colspan="7"></td>
@@ -279,8 +303,8 @@ and open the template in the editor.
             </tr>
             
             <tr>
-                <td colspan="6"><input type="button" value="Ganhos Totais: (Carregue no Botão!)" onclick="SimulPoup()"></td>
-                <td><input type="text" name="Total_Gain"></td>
+                <td colspan="6"><input type="button" value="Ganho Total: (Carregue no Botão!)" onclick="SimulPoup()"></td>
+                <td><input type="text" name="total_gain" id="Total_Gain"></td>
             </tr>
             <tr>
                 <td colspan="7"><input type="button" value="Encomende Já !" onclick="SimulPoup()"></td>
@@ -310,40 +334,1115 @@ and open the template in the editor.
     messagingSenderId: "679151408753"
   };
   firebase.initializeApp(config);
+  
+    
+    // 1º Element realtime data update
+            //cba_prod_price[0]=document.getElementById('pUN_cba_01');
+            var dbRef1=firebase.database().ref().child('2018-06-09').child('Cerveja').child('mPreco');
+            dbRef1.on('value', snap => document.getElementById('pUN_cba_01').value = snap.val()); 
+            
+    // 2º Element realtime data update
+            //cba_prod_price[0]=document.getElementById('pUN_cba_01');
+            var dbRef2=firebase.database().ref().child('2018-06-09').child('Agua').child('mPreco');
+            dbRef2.on('value', snap => document.getElementById('pUN_cba_02').value = snap.val());
+            
+    // 3º Element realtime data update
+            //cba_prod_price[0]=document.getElementById('pUN_cba_01');
+            var dbRef3=firebase.database().ref().child('2018-06-09').child('Oleo de Soja').child('mPreco');
+            dbRef3.on('value', snap => document.getElementById('pUN_cba_03').value = snap.val());
+    
+    // 4º Element realtime data update
+            //cba_prod_price[0]=document.getElementById('pUN_cba_01');
+            var dbRef4=firebase.database().ref().child('2018-06-09').child('Oleo de Palma').child('mPreco');
+            dbRef4.on('value', snap => document.getElementById('pUN_cba_04').value = snap.val());
+    
+    // 5º Element realtime data update
+            //cba_prod_price[0]=document.getElementById('pUN_cba_01');
+            var dbRef5=firebase.database().ref().child('2018-06-09').child('Leite').child('mPreco');
+            dbRef5.on('value', snap => document.getElementById('pUN_cba_05').value = snap.val());
+    // 6º Element realtime data update
+            //cba_prod_price[0]=document.getElementById('pUN_cba_01');
+            var dbRef6=firebase.database().ref().child('2018-06-09').child('Pao').child('mPreco');
+            dbRef6.on('value', snap => document.getElementById('pUN_cba_06').value = snap.val()); 
+            
+    // 7º Element realtime data update
+            //cba_prod_price[0]=document.getElementById('pUN_cba_01');
+            var dbRef7=firebase.database().ref().child('2018-06-09').child('Acucar').child('mPreco');
+            dbRef7.on('value', snap => document.getElementById('pUN_cba_07').value = snap.val());
+            
+    // 8º Element realtime data update
+            //cba_prod_price[0]=document.getElementById('pUN_cba_01');
+            var dbRef8=firebase.database().ref().child('2018-06-09').child('Ovo').child('mPreco');
+            dbRef8.on('value', snap => document.getElementById('pUN_cba_08').value = snap.val());
+    
+    // 9º Element realtime data update
+            //cba_prod_price[0]=document.getElementById('pUN_cba_01');
+            var dbRef9=firebase.database().ref().child('2018-06-09').child('Farinha de Trigo').child('mPreco');
+            dbRef9.on('value', snap => document.getElementById('pUN_cba_09').value = snap.val());
+    
+    // 10º Element realtime data update
+            //cba_prod_price[0]=document.getElementById('pUN_cba_01');
+            var dbRef10=firebase.database().ref().child('2018-06-09').child('Sal').child('mPreco');
+            dbRef10.on('value', snap => document.getElementById('pUN_cba_10').value = snap.val());
+    // 11º Element realtime data update
+            //cba_prod_price[0]=document.getElementById('pUN_cba_01');
+            var dbRef11=firebase.database().ref().child('2018-06-09').child('Arroz').child('mPreco');
+            dbRef11.on('value', snap => document.getElementById('pUN_cba_11').value = snap.val()); 
+            
+    // 12º Element realtime data update
+            //cba_prod_price[0]=document.getElementById('pUN_cba_01');
+            var dbRef12=firebase.database().ref().child('2018-06-09').child('Massa').child('mPreco');
+            dbRef12.on('value', snap => document.getElementById('pUN_cba_12').value = snap.val());
+            
+    // 13º Element realtime data update
+            //cba_prod_price[0]=document.getElementById('pUN_cba_01');
+            var dbRef13=firebase.database().ref().child('2018-06-09').child('Feijao').child('mPreco');
+            dbRef13.on('value', snap => document.getElementById('pUN_cba_13').value = snap.val());
+    
+    // 14º Element realtime data update
+            //cba_prod_price[0]=document.getElementById('pUN_cba_01');
+            var dbRef14=firebase.database().ref().child('2018-06-09').child('Frango').child('mPreco');
+            dbRef14.on('value', snap => document.getElementById('pUN_cba_14').value = snap.val());
+    
+    // 15º Element realtime data update
+            //cba_prod_price[0]=document.getElementById('pUN_cba_01');
+            var dbRef15=firebase.database().ref().child('2018-06-09').child('Peixe').child('mPreco');
+            dbRef15.on('value', snap => document.getElementById('pUN_cba_15').value = snap.val());
+    // 16º Element realtime data update
+            //cba_prod_price[0]=document.getElementById('pUN_cba_01');
+            var dbRef16=firebase.database().ref().child('2018-06-09').child('CarneSeca').child('mPreco');
+            dbRef16.on('value', snap => document.getElementById('pUN_cba_16').value = snap.val()); 
+            
+    // 17º Element realtime data update
+            //cba_prod_price[0]=document.getElementById('pUN_cba_01');
+            var dbRef17=firebase.database().ref().child('2018-06-09').child('FubaMilho').child('mPreco');
+            dbRef17.on('value', snap => document.getElementById('pUN_cba_17').value = snap.val());
+            
+    // 18º Element realtime data update
+            //cba_prod_price[0]=document.getElementById('pUN_cba_01');
+            var dbRef18=firebase.database().ref().child('2018-06-09').child('FubaMandioca').child('mPreco');
+            dbRef18.on('value', snap => document.getElementById('pUN_cba_18').value = snap.val());
+    
+    // 19º Element realtime data update
+            //cba_prod_price[0]=document.getElementById('pUN_cba_01');
+            var dbRef19=firebase.database().ref().child('2018-06-09').child('PastaDente').child('mPreco');
+            dbRef19.on('value', snap => document.getElementById('pUN_cba_19').value = snap.val());
+    
+    // 20º Element realtime data update
+            //cba_prod_price[0]=document.getElementById('pUN_cba_01');
+            var dbRef20=firebase.database().ref().child('2018-06-09').child('SabaoBarra').child('mPreco');
+            dbRef20.on('value', snap => document.getElementById('pUN_cba_20').value = snap.val());
+          
+  
 </script>
 
 <script>
-    
+    function getSum(total, num) {
+        return total + num;
+    }
     function SimulPoup() {
-  
+       
+        //Get Reference prices from Firebase Database
+            // 1- Connect to Firebase Database
+            // 2- Get products' prices
+            // 2.1- Store these values into javascript variables
+            var user_prod_price = [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0];
+            // 2.2- Store selected products' options
+            var user_prod_selection = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+            // 2.3- Store selected products' quantities
+            var user_prod_quantity = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+            // 2.4- Store selected products' prices
+            var cba_prod_price_string = ["val","val","val","val","val","val","val","val","val","val","val","val","val","val","val","val","val","val","val","val"];
+            var cba_prod_price_number = [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0];
+            // Store selected product value:
+             var user_prod_value = [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0];
+            
+            // 2.5- Store CBA product value:
+            var cba_prod_value = [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0];
+            // 2.6- Store CBA product Gain:
+            var cba_prod_gain = [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0];
+            
+        ////////////////////////////////////////////////////////////////////////////////////////////////
+        //Get the products' price from CBA firebase database:                                         //
+        ////////////////////////////////////////////////////////////////////////////////////////////////
+        //Update the corresponding array of CBA products' price                                       //
+        ////////////////////////////////////////////////////////////////////////////////////////////////
         
-        /*this.firstNumber = document.getElementById('first_item_quantity');
-        this.firstNumber = document.getElementById('first_item_quantity');
-        this.firstNumber = document.getElementById('first_item_quantity');
-        this.firstNumber = document.getElementById('first_item_quantity');
-        this.firstNumber = document.getElementById('first_item_quantity');
-        this.firstNumber = document.getElementById('first_item_quantity');
-        this.firstNumber = document.getElementById('first_item_quantity');
-        this.firstNumber = document.getElementById('first_item_quantity');
-        this.firstNumber = document.getElementById('first_item_quantity');
-        this.firstNumber = document.getElementById('first_item_quantity');
-        this.firstNumber = document.getElementById('first_item_quantity');
-        this.firstNumber = document.getElementById('first_item_quantity');
-        this.firstNumber = document.getElementById('first_item_quantity');
-        this.firstNumber = document.getElementById('first_item_quantity');
-        this.firstNumber = document.getElementById('first_item_quantity');
-        this.firstNumber = document.getElementById('first_item_quantity');
-        this.firstNumber = document.getElementById('first_item_quantity');
-        this.firstNumber = document.getElementById('first_item_quantity');
-        this.firstNumber = document.getElementById('first_item_quantity');
-        this.firstNumber = document.getElementById('first_item_quantity');
+                                      
+        
+        
+        ////////////////////////////////////////////////////////////////////////////////////////////////
+        //Update the selected products' list:                                                         //
+        ////////////////////////////////////////////////////////////////////////////////////////////////
+        //Check if a product was selected                                                             //
+        //If selected, then... assign value 1 to its position on the selected products array variable //
+        //Do the above steps for all 20 products, each time                                           //
+        ////////////////////////////////////////////////////////////////////////////////////////////////
+        
+        //1st Product
+        if(document.getElementById("first_item_user_select").checked === true){
+            user_prod_selection[0] = 1;
+            
+           
+            // To Store selected products' quantities:
+            user_prod_quantity[0] = document.getElementById('first_item_quantity').value;
+            
+            //To Store selected products' prices:
+            user_prod_price[0] = document.getElementById('first_item_price').value;
+           
+             cba_prod_price_string[0]= document.getElementById('pUN_cba_01').value;
+            
+            //To store CBA's product price:
+            //CBA product price
+            //Convert the string into a number
+            //1- Find the index of the occurrence of:"Kz(
+            var lastid = (document.getElementById('pUN_cba_01').value).indexOf("Kz(");
+            //2- Slice the string before the occurrence of the mask("Kz(")
+           // if(lastid>=0)
+            //{
+                var sliced=(document.getElementById('pUN_cba_01').value).slice(0,lastid);
+                cba_prod_price_number[0] = Number(sliced);
+                //document.getElementById('pGain_cba_01').innerHTML = cba_prod_price_number[0];
+            //}else{
+              //  cba_prod_price_number[0] = Number(document.getElementById('cba_prod_value').value);
+            //}
+            
+           
+            //To determine user product value:
+            user_prod_value[0]=(user_prod_quantity[0]*user_prod_price[0]);
+            document.getElementById('pTotal_01').value = user_prod_value[0];
+            
+            //To determine the CBA product value:
+            cba_prod_value[0] = user_prod_quantity[0] * cba_prod_price_number[0];
+            document.getElementById('pTotal_cba_01').value = cba_prod_value[0];
+            
+            //To determine the CBA product GAIN:
+           cba_prod_gain[0] = user_prod_value[0]-cba_prod_value[0];
+           document.getElementById('pGain_cba_01').value = cba_prod_gain[0];
+           
+            console.log("Selected Element# (1)-Cerveja");
+          
+            
+        }else{
+            user_prod_selection[0] = 0;
+            console.log("Selected Element# (0)-Cerveja");
+            
+            cba_prod_price_number[0] = 0;
+        };
+        
+        //2nd Product
+        if(document.getElementById("second_item_user_select").checked === true){
+            user_prod_selection[1] = 1;
+            
+           
+            // To Store selected products' quantities:
+            user_prod_quantity[1] = document.getElementById('second_item_quantity').value;
+            
+            //To Store selected products' prices:
+            user_prod_price[1] = document.getElementById('second_item_price').value;
+           
+             cba_prod_price_string[1]= document.getElementById('pUN_cba_02').value;
+            
+            //To store CBA's product price:
+            //CBA product price
+            //Convert the string into a number
+            //1- Find the index of the occurrence of:"Kz(
+            var lastid1 = (document.getElementById('pUN_cba_02').value).indexOf("Kz(");
+            //2- Slice the string before the occurrence of the mask("Kz(")
+           // if(lastid>=0)
+            //{
+                var sliced1=(document.getElementById('pUN_cba_02').value).slice(0,lastid1);
+                cba_prod_price_number[1] = Number(sliced1);
+                //document.getElementById('pGain_cba_01').innerHTML = cba_prod_price_number[0];
+            //}else{
+              //  cba_prod_price_number[0] = Number(document.getElementById('cba_prod_value').value);
+            //}
+            
+           
+            //To determine user product value:
+            user_prod_value[1]=(user_prod_quantity[1]*user_prod_price[1]);
+            document.getElementById('pTotal_02').value = user_prod_value[1];
+            
+            //To determine the CBA product value:
+            cba_prod_value[1] = user_prod_quantity[1] * cba_prod_price_number[1];
+            document.getElementById('pTotal_cba_02').value = cba_prod_value[1];
+            
+            //To determine the CBA product GAIN:
+           cba_prod_gain[1] = user_prod_value[1]-cba_prod_value[1];
+           document.getElementById('pGain_cba_02').value = cba_prod_gain[1];
+           
+            console.log("Selected Element# (1)-Agua");
+          
+            
+        }else{
+            user_prod_selection[1] = 0;
+            console.log("Selected Element# (0)-Agua");
+            
+            cba_prod_price_number[1] = 0;
+        };
+        //3rd Product
+        if(document.getElementById("third_item_user_select").checked === true){
+            user_prod_selection[2] = 1;
+            
+            
+            // To Store selected products' quantities:
+            user_prod_quantity[2] = document.getElementById('third_item_quantity').value;
+            
+            //To Store selected products' prices:
+            user_prod_price[2] = document.getElementById('third_item_price').value;
+           
+             cba_prod_price_string[2]= document.getElementById('pUN_cba_03').value;
+            
+            //To store CBA's product price:
+            //CBA product price
+            //Convert the string into a number
+            //1- Find the index of the occurrence of:"Kz(
+            var lastid2 = (document.getElementById('pUN_cba_03').value).indexOf("Kz(");
+            //2- Slice the string before the occurrence of the mask("Kz(")
+           // if(lastid>=0)
+            //{
+                var sliced2=(document.getElementById('pUN_cba_03').value).slice(0,lastid2);
+                cba_prod_price_number[2] = Number(sliced2);
+                //document.getElementById('pGain_cba_01').innerHTML = cba_prod_price_number[0];
+            //}else{
+              //  cba_prod_price_number[0] = Number(document.getElementById('cba_prod_value').value);
+            //}
+            
+           
+            //To determine user product value:
+            user_prod_value[2]=(user_prod_quantity[2]*user_prod_price[2]);
+            document.getElementById('pTotal_03').value = user_prod_value[2];
+            
+            //To determine the CBA product value:
+            cba_prod_value[2] = user_prod_quantity[2] * cba_prod_price_number[2];
+            document.getElementById('pTotal_cba_03').value = cba_prod_value[2];
+            
+            //To determine the CBA product GAIN:
+           cba_prod_gain[2] = user_prod_value[2]-cba_prod_value[2];
+           document.getElementById('pGain_cba_03').value = cba_prod_gain[2];
+           
+            
+            console.log("Selected Element# (1)-Oleo de Soja");
+        }else{
+            user_prod_selection[2] = 0;
+            console.log("Selected Element# (0)-Oleo de Soja");
+        };
+        //4th Product
+        if(document.getElementById("fourth_item_user_select").checked === true){
+            user_prod_selection[3] = 1;
+            
+            // To Store selected products' quantities:
+            user_prod_quantity[3] = document.getElementById('fourth_item_quantity').value;
+            
+            //To Store selected products' prices:
+            user_prod_price[3] = document.getElementById('fourth_item_price').value;
+           
+             cba_prod_price_string[3]= document.getElementById('pUN_cba_04').value;
+            
+            //To store CBA's product price:
+            //CBA product price
+            //Convert the string into a number
+            //1- Find the index of the occurrence of:"Kz(
+            var lastid3 = (document.getElementById('pUN_cba_04').value).indexOf("Kz(");
+            //2- Slice the string before the occurrence of the mask("Kz(")
+           // if(lastid>=0)
+            //{
+                var sliced3=(document.getElementById('pUN_cba_04').value).slice(0,lastid3);
+                cba_prod_price_number[3] = Number(sliced3);
+                //document.getElementById('pGain_cba_01').innerHTML = cba_prod_price_number[0];
+            //}else{
+              //  cba_prod_price_number[0] = Number(document.getElementById('cba_prod_value').value);
+            //}
+            
+           
+            //To determine user product value:
+            user_prod_value[3]=(user_prod_quantity[3]*user_prod_price[3]);
+            document.getElementById('pTotal_04').value = user_prod_value[3];
+            
+            //To determine the CBA product value:
+            cba_prod_value[3] = user_prod_quantity[3] * cba_prod_price_number[3];
+            document.getElementById('pTotal_cba_04').value = cba_prod_value[3];
+            
+            //To determine the CBA product GAIN:
+           cba_prod_gain[3] = user_prod_value[3]-cba_prod_value[3];
+           document.getElementById('pGain_cba_04').value = cba_prod_gain[3];
+           
+            
+            console.log("Selected Element# (1)-Oleo de Palma");
+        }else{
+            user_prod_selection[3] = 0;
+            console.log("Selected Element# (0)-Oleo de Palma");
+        };
+        //5th Product
+        if(document.getElementById("fifth_item_user_select").checked === true){
+            user_prod_selection[4] = 1;
+            
+            // To Store selected products' quantities:
+            user_prod_quantity[4] = document.getElementById('fifth_item_quantity').value;
+            
+            //To Store selected products' prices:
+            user_prod_price[4] = document.getElementById('fifth_item_price').value;
+           
+             cba_prod_price_string[4]= document.getElementById('pUN_cba_05').value;
+            
+            //To store CBA's product price:
+            //CBA product price
+            //Convert the string into a number
+            //1- Find the index of the occurrence of:"Kz(
+            var lastid4 = (document.getElementById('pUN_cba_05').value).indexOf("Kz(");
+            //2- Slice the string before the occurrence of the mask("Kz(")
+           // if(lastid>=0)
+            //{
+                var sliced4=(document.getElementById('pUN_cba_05').value).slice(0,lastid4);
+                cba_prod_price_number[4] = Number(sliced4);
+                //document.getElementById('pGain_cba_01').innerHTML = cba_prod_price_number[0];
+            //}else{
+              //  cba_prod_price_number[0] = Number(document.getElementById('cba_prod_value').value);
+            //}
+            
+           
+            //To determine user product value:
+            user_prod_value[4]=(user_prod_quantity[4]*user_prod_price[4]);
+            document.getElementById('pTotal_05').value = user_prod_value[4];
+            
+            //To determine the CBA product value:
+            cba_prod_value[4] = user_prod_quantity[4] * cba_prod_price_number[4];
+            document.getElementById('pTotal_cba_05').value = cba_prod_value[4];
+            
+            //To determine the CBA product GAIN:
+           cba_prod_gain[4] = user_prod_value[4]-cba_prod_value[4];
+           document.getElementById('pGain_cba_05').value = cba_prod_gain[4];
+           
+            
+            console.log("Selected Element# (1)-Leite");
+        }else{
+            user_prod_selection[4] = 0;
+            console.log("Selected Element# (0)-Leite");
+        };
+        //6th Product
+        if(document.getElementById("sixth_item_user_select").checked === true){
+            user_prod_selection[5] = 1;
+            // To Store selected products' quantities:
+            user_prod_quantity[5] = document.getElementById('sixth_item_quantity').value;
+            
+            //To Store selected products' prices:
+            user_prod_price[5] = document.getElementById('sixth_item_price').value;
+           
+             cba_prod_price_string[5]= document.getElementById('pUN_cba_06').value;
+            
+            //To store CBA's product price:
+            //CBA product price
+            //Convert the string into a number
+            //1- Find the index of the occurrence of:"Kz(
+            var lastid5 = (document.getElementById('pUN_cba_06').value).indexOf("Kz(");
+            //2- Slice the string before the occurrence of the mask("Kz(")
+           // if(lastid>=0)
+            //{
+                var sliced5=(document.getElementById('pUN_cba_06').value).slice(0,lastid5);
+                cba_prod_price_number[5] = Number(sliced5);
+                //document.getElementById('pGain_cba_01').innerHTML = cba_prod_price_number[0];
+            //}else{
+              //  cba_prod_price_number[0] = Number(document.getElementById('cba_prod_value').value);
+            //}
+            
+           
+            //To determine user product value:
+            user_prod_value[5]=(user_prod_quantity[5]*user_prod_price[5]);
+            document.getElementById('pTotal_06').value = user_prod_value[5];
+            
+            //To determine the CBA product value:
+            cba_prod_value[5] = user_prod_quantity[5] * cba_prod_price_number[5];
+            document.getElementById('pTotal_cba_06').value = cba_prod_value[5];
+            
+            //To determine the CBA product GAIN:
+           cba_prod_gain[5] = user_prod_value[5]-cba_prod_value[5];
+           document.getElementById('pGain_cba_06').value = cba_prod_gain[5];
+           
+            
+            console.log("Selected Element# (1)-Pao");
+        }else{
+            user_prod_selection[5] = 0;
+            console.log("Selected Element# (0)-Pao");
+        };
+        //7th Product
+        if(document.getElementById("seventh_item_user_select").checked === true){
+            user_prod_selection[6] = 1;
+            // To Store selected products' quantities:
+            user_prod_quantity[6] = document.getElementById('seventh_item_quantity').value;
+            
+            //To Store selected products' prices:
+            user_prod_price[6] = document.getElementById('seventh_item_price').value;
+           
+             cba_prod_price_string[6]= document.getElementById('pUN_cba_07').value;
+            
+            //To store CBA's product price:
+            //CBA product price
+            //Convert the string into a number
+            //1- Find the index of the occurrence of:"Kz(
+            var lastid6 = (document.getElementById('pUN_cba_07').value).indexOf("Kz(");
+            //2- Slice the string before the occurrence of the mask("Kz(")
+           // if(lastid>=0)
+            //{
+                var sliced6=(document.getElementById('pUN_cba_07').value).slice(0,lastid6);
+                cba_prod_price_number[6] = Number(sliced6);
+                //document.getElementById('pGain_cba_01').innerHTML = cba_prod_price_number[0];
+            //}else{
+              //  cba_prod_price_number[0] = Number(document.getElementById('cba_prod_value').value);
+            //}
+            
+           
+            //To determine user product value:
+            user_prod_value[6]=(user_prod_quantity[6]*user_prod_price[6]);
+            document.getElementById('pTotal_07').value = user_prod_value[6];
+            
+            //To determine the CBA product value:
+            cba_prod_value[6] = user_prod_quantity[6] * cba_prod_price_number[6];
+            document.getElementById('pTotal_cba_07').value = cba_prod_value[6];
+            
+            //To determine the CBA product GAIN:
+           cba_prod_gain[6] = user_prod_value[6]-cba_prod_value[6];
+           document.getElementById('pGain_cba_07').value = cba_prod_gain[6];
+           
+            
+            console.log("Selected Element# (1)-Açucar");
+        }else{
+            user_prod_selection[6] = 0;
+            console.log("Selected Element# (0)-Açucar");
+        };
+        //8th Product
+        if(document.getElementById("eigth_item_user_select").checked === true){
+            user_prod_selection[7] = 1;
+            
+            // To Store selected products' quantities:
+            user_prod_quantity[7] = document.getElementById('eigth_item_quantity').value;
+            
+            //To Store selected products' prices:
+            user_prod_price[7] = document.getElementById('eigth_item_price').value;
+           
+             cba_prod_price_string[7]= document.getElementById('pUN_cba_08').value;
+            
+            //To store CBA's product price:
+            //CBA product price
+            //Convert the string into a number
+            //1- Find the index of the occurrence of:"Kz(
+            var lastid7 = (document.getElementById('pUN_cba_08').value).indexOf("Kz(");
+            //2- Slice the string before the occurrence of the mask("Kz(")
+           // if(lastid>=0)
+            //{
+                var sliced7=(document.getElementById('pUN_cba_08').value).slice(0,lastid7);
+                cba_prod_price_number[7] = Number(sliced7);
+                //document.getElementById('pGain_cba_01').innerHTML = cba_prod_price_number[0];
+            //}else{
+              //  cba_prod_price_number[0] = Number(document.getElementById('cba_prod_value').value);
+            //}
+            
+           
+            //To determine user product value:
+            user_prod_value[7]=(user_prod_quantity[7]*user_prod_price[7]);
+            document.getElementById('pTotal_08').value = user_prod_value[7];
+            
+            //To determine the CBA product value:
+            cba_prod_value[7] = user_prod_quantity[7] * cba_prod_price_number[7];
+            document.getElementById('pTotal_cba_08').value = cba_prod_value[7];
+            
+            //To determine the CBA product GAIN:
+           cba_prod_gain[7] = user_prod_value[7]-cba_prod_value[7];
+           document.getElementById('pGain_cba_08').value = cba_prod_gain[7];
+
+            console.log("Selected Element# (1)-Ovos");
+        }else{
+            user_prod_selection[7] = 0;
+            console.log("Selected Element# (0)-Ovos");
+        };
+        //9th Product
+        if(document.getElementById("nineth_item_user_select").checked === true){
+            user_prod_selection[8] = 1;
+            
+            // To Store selected products' quantities:
+            user_prod_quantity[8] = document.getElementById('nineth_item_quantity').value;
+            
+            //To Store selected products' prices:
+            user_prod_price[8] = document.getElementById('nineth_item_price').value;
+           
+             cba_prod_price_string[8]= document.getElementById('pUN_cba_09').value;
+            
+            //To store CBA's product price:
+            //CBA product price
+            //Convert the string into a number
+            //1- Find the index of the occurrence of:"Kz(
+            var lastid8 = (document.getElementById('pUN_cba_09').value).indexOf("Kz(");
+            //2- Slice the string before the occurrence of the mask("Kz(")
+           // if(lastid>=0)
+            //{
+                var sliced8=(document.getElementById('pUN_cba_09').value).slice(0,lastid8);
+                cba_prod_price_number[8] = Number(sliced8);
+                //document.getElementById('pGain_cba_01').innerHTML = cba_prod_price_number[0];
+            //}else{
+              //  cba_prod_price_number[0] = Number(document.getElementById('cba_prod_value').value);
+            //}
+            
+           
+            //To determine user product value:
+            user_prod_value[8]=(user_prod_quantity[8]*user_prod_price[8]);
+            document.getElementById('pTotal_09').value = user_prod_value[8];
+            
+            //To determine the CBA product value:
+            cba_prod_value[8] = user_prod_quantity[8] * cba_prod_price_number[8];
+            document.getElementById('pTotal_cba_09').value = cba_prod_value[8];
+            
+            //To determine the CBA product GAIN:
+           cba_prod_gain[8] = user_prod_value[8]-cba_prod_value[8];
+           document.getElementById('pGain_cba_09').value = cba_prod_gain[8];
+
+            console.log("Selected Element# (1)-Farinha de Trigo");
+        }else{
+            user_prod_selection[8] = 0;
+            console.log("Selected Element# (0)-Farinha de Trigo");
+        };
+        //10th Product
+        if(document.getElementById("tenth_item_user_select").checked === true){
+            user_prod_selection[9] = 1;
+            
+             // To Store selected products' quantities:
+            user_prod_quantity[9] = document.getElementById('tenth_item_quantity').value;
+            
+            //To Store selected products' prices:
+            user_prod_price[9] = document.getElementById('tenth_item_price').value;
+           
+             cba_prod_price_string[9]= document.getElementById('pUN_cba_10').value;
+            
+            //To store CBA's product price:
+            //CBA product price
+            //Convert the string into a number
+            //1- Find the index of the occurrence of:"Kz(
+            var lastid9 = (document.getElementById('pUN_cba_10').value).indexOf("Kz(");
+            //2- Slice the string before the occurrence of the mask("Kz(")
+           // if(lastid>=0)
+            //{
+                var sliced9=(document.getElementById('pUN_cba_10').value).slice(0,lastid9);
+                cba_prod_price_number[9] = Number(sliced9);
+                //document.getElementById('pGain_cba_01').innerHTML = cba_prod_price_number[0];
+            //}else{
+              //  cba_prod_price_number[0] = Number(document.getElementById('cba_prod_value').value);
+            //}
+            
+           
+            //To determine user product value:
+            user_prod_value[9]=(user_prod_quantity[9]*user_prod_price[9]);
+            document.getElementById('pTotal_10').value = user_prod_value[9];
+            
+            //To determine the CBA product value:
+            cba_prod_value[9] = user_prod_quantity[9] * cba_prod_price_number[9];
+            document.getElementById('pTotal_cba_10').value = cba_prod_value[9];
+            
+            //To determine the CBA product GAIN:
+           cba_prod_gain[9] = user_prod_value[9]-cba_prod_value[9];
+           document.getElementById('pGain_cba_10').value = cba_prod_gain[9];
+
+            
+            console.log("Selected Element# (1)-Sal");
+        }else{
+            user_prod_selection[9] = 0;
+            console.log("Selected Element# (0)-Sal");
+        };
+        //11th Product
+        if(document.getElementById("eleventh_item_user_select").checked === true){
+            user_prod_selection[10] = 1;
+            
+             // To Store selected products' quantities:
+            user_prod_quantity[10] = document.getElementById('eleventh_item_quantity').value;
+            
+            //To Store selected products' prices:
+            user_prod_price[10] = document.getElementById('eleventh_item_price').value;
+           
+             cba_prod_price_string[10]= document.getElementById('pUN_cba_11').value;
+            
+            //To store CBA's product price:
+            //CBA product price
+            //Convert the string into a number
+            //1- Find the index of the occurrence of:"Kz(
+            var lastid10 = (document.getElementById('pUN_cba_11').value).indexOf("Kz(");
+            //2- Slice the string before the occurrence of the mask("Kz(")
+           // if(lastid>=0)
+            //{
+                var sliced10=(document.getElementById('pUN_cba_11').value).slice(0,lastid10);
+                cba_prod_price_number[10] = Number(sliced10);
+                //document.getElementById('pGain_cba_01').innerHTML = cba_prod_price_number[0];
+            //}else{
+              //  cba_prod_price_number[0] = Number(document.getElementById('cba_prod_value').value);
+            //}
+            
+           
+            //To determine user product value:
+            user_prod_value[10]=(user_prod_quantity[10]*user_prod_price[10]);
+            document.getElementById('pTotal_11').value = user_prod_value[10];
+            
+            //To determine the CBA product value:
+            cba_prod_value[10] = user_prod_quantity[10] * cba_prod_price_number[10];
+            document.getElementById('pTotal_cba_11').value = cba_prod_value[10];
+            
+            //To determine the CBA product GAIN:
+           cba_prod_gain[10] = user_prod_value[10]-cba_prod_value[10];
+           document.getElementById('pGain_cba_11').value = cba_prod_gain[10];
+
+            
+            console.log("Selected Element# (1)-Arroz");
+        }else{
+            user_prod_selection[10] = 0;
+            console.log("Selected Element# (0)-Arroz");
+        };
+        //12th Product
+        if(document.getElementById("twelveth_item_user_select").checked === true){
+            user_prod_selection[11] = 1;
+            
+             // To Store selected products' quantities:
+            user_prod_quantity[11] = document.getElementById('twelveth_item_quantity').value;
+            
+            //To Store selected products' prices:
+            user_prod_price[11] = document.getElementById('twelveth_item_price').value;
+           
+             cba_prod_price_string[11]= document.getElementById('pUN_cba_12').value;
+            
+            //To store CBA's product price:
+            //CBA product price
+            //Convert the string into a number
+            //1- Find the index of the occurrence of:"Kz(
+            var lastid11 = (document.getElementById('pUN_cba_12').value).indexOf("Kz(");
+            //2- Slice the string before the occurrence of the mask("Kz(")
+           // if(lastid>=0)
+            //{
+                var sliced11=(document.getElementById('pUN_cba_12').value).slice(0,lastid11);
+                cba_prod_price_number[11] = Number(sliced11);
+                //document.getElementById('pGain_cba_01').innerHTML = cba_prod_price_number[0];
+            //}else{
+              //  cba_prod_price_number[0] = Number(document.getElementById('cba_prod_value').value);
+            //}
+            
+           
+            //To determine user product value:
+            user_prod_value[11]=(user_prod_quantity[11]*user_prod_price[11]);
+            document.getElementById('pTotal_12').value = user_prod_value[11];
+            
+            //To determine the CBA product value:
+            cba_prod_value[11] = user_prod_quantity[11] * cba_prod_price_number[11];
+            document.getElementById('pTotal_cba_12').value = cba_prod_value[11];
+            
+            //To determine the CBA product GAIN:
+           cba_prod_gain[11] = user_prod_value[11]-cba_prod_value[11];
+           document.getElementById('pGain_cba_12').value = cba_prod_gain[11];
+
+            
+            console.log("Selected Element# (1)-Massa");
+        }else{
+            user_prod_selection[11] = 0;
+            console.log("Selected Element# (0)-Massa");
+        };
+        //13th Product
+        if(document.getElementById("thirteenth_item_user_select").checked === true){
+            user_prod_selection[12] = 1;
+            
+             // To Store selected products' quantities:
+            user_prod_quantity[12] = document.getElementById('thirteenth_item_quantity').value;
+            
+            //To Store selected products' prices:
+            user_prod_price[12] = document.getElementById('thirteenth_item_price').value;
+           
+             cba_prod_price_string[12]= document.getElementById('pUN_cba_13').value;
+            
+            //To store CBA's product price:
+            //CBA product price
+            //Convert the string into a number
+            //1- Find the index of the occurrence of:"Kz(
+            var lastid12 = (document.getElementById('pUN_cba_13').value).indexOf("Kz(");
+            //2- Slice the string before the occurrence of the mask("Kz(")
+           // if(lastid>=0)
+            //{
+                var sliced12=(document.getElementById('pUN_cba_13').value).slice(0,lastid12);
+                cba_prod_price_number[12] = Number(sliced12);
+                //document.getElementById('pGain_cba_01').innerHTML = cba_prod_price_number[0];
+            //}else{
+              //  cba_prod_price_number[0] = Number(document.getElementById('cba_prod_value').value);
+            //}
+            
+           
+            //To determine user product value:
+            user_prod_value[12]=(user_prod_quantity[12]*user_prod_price[12]);
+            document.getElementById('pTotal_13').value = user_prod_value[12];
+            
+            //To determine the CBA product value:
+            cba_prod_value[12] = user_prod_quantity[12] * cba_prod_price_number[12];
+            document.getElementById('pTotal_cba_13').value = cba_prod_value[12];
+            
+            //To determine the CBA product GAIN:
+           cba_prod_gain[12] = user_prod_value[12]-cba_prod_value[12];
+           document.getElementById('pGain_cba_13').value = cba_prod_gain[12];
+
+            
+            console.log("Selected Element# (1)-Feijao");
+        }else{
+            user_prod_selection[12] = 0;
+            console.log("Selected Element# (0)-Feijao");
+        };
+        //14th Product
+        if(document.getElementById("fourteenth_item_user_select").checked === true){
+            user_prod_selection[13] = 1;
+            
+             // To Store selected products' quantities:
+            user_prod_quantity[13] = document.getElementById('fourteenth_item_quantity').value;
+            
+            //To Store selected products' prices:
+            user_prod_price[13] = document.getElementById('fourteenth_item_price').value;
+           
+             cba_prod_price_string[13]= document.getElementById('pUN_cba_14').value;
+            
+            //To store CBA's product price:
+            //CBA product price
+            //Convert the string into a number
+            //1- Find the index of the occurrence of:"Kz(
+            var lastid13 = (document.getElementById('pUN_cba_14').value).indexOf("Kz(");
+            //2- Slice the string before the occurrence of the mask("Kz(")
+           // if(lastid>=0)
+            //{
+                var sliced13=(document.getElementById('pUN_cba_14').value).slice(0,lastid13);
+                cba_prod_price_number[14] = Number(sliced13);
+                //document.getElementById('pGain_cba_01').innerHTML = cba_prod_price_number[0];
+            //}else{
+              //  cba_prod_price_number[0] = Number(document.getElementById('cba_prod_value').value);
+            //}
+            
+           
+            //To determine user product value:
+            user_prod_value[13]=(user_prod_quantity[13]*user_prod_price[13]);
+            document.getElementById('pTotal_14').value = user_prod_value[13];
+            
+            //To determine the CBA product value:
+            cba_prod_value[13] = user_prod_quantity[13] * cba_prod_price_number[13];
+            document.getElementById('pTotal_cba_14').value = cba_prod_value[13];
+            
+            //To determine the CBA product GAIN:
+           cba_prod_gain[13] = user_prod_value[13]-cba_prod_value[13];
+           document.getElementById('pGain_cba_14').value = cba_prod_gain[13];
+
+            
+            console.log("Selected Element# (1)-Frango");
+        }else{
+            user_prod_selection[13] = 0;
+            console.log("Selected Element# (0)-Frango");
+        };
+        //15th Product
+        if(document.getElementById("fifteenth_item_user_select").checked === true){
+            user_prod_selection[14] = 1;
+            
+             // To Store selected products' quantities:
+            user_prod_quantity[14] = document.getElementById('fifteenth_item_quantity').value;
+            
+            //To Store selected products' prices:
+            user_prod_price[14] = document.getElementById('fifteenth_item_price').value;
+           
+             cba_prod_price_string[14]= document.getElementById('pUN_cba_15').value;
+            
+            //To store CBA's product price:
+            //CBA product price
+            //Convert the string into a number
+            //1- Find the index of the occurrence of:"Kz(
+            var lastid14 = (document.getElementById('pUN_cba_15').value).indexOf("Kz(");
+            //2- Slice the string before the occurrence of the mask("Kz(")
+           // if(lastid>=0)
+            //{
+                var sliced14=(document.getElementById('pUN_cba_15').value).slice(0,lastid14);
+                cba_prod_price_number[14] = Number(sliced14);
+                //document.getElementById('pGain_cba_01').innerHTML = cba_prod_price_number[0];
+            //}else{
+              //  cba_prod_price_number[0] = Number(document.getElementById('cba_prod_value').value);
+            //}
+            
+           
+            //To determine user product value:
+            user_prod_value[14]=(user_prod_quantity[14]*user_prod_price[14]);
+            document.getElementById('pTotal_15').value = user_prod_value[14];
+            
+            //To determine the CBA product value:
+            cba_prod_value[14] = user_prod_quantity[14] * cba_prod_price_number[14];
+            document.getElementById('pTotal_cba_15').value = cba_prod_value[14];
+            
+            //To determine the CBA product GAIN:
+           cba_prod_gain[14] = user_prod_value[14]-cba_prod_value[14];
+           document.getElementById('pGain_cba_15').value = cba_prod_gain[14];
+
+            
+            console.log("Selected Element# (1)-Peixe");
+        }else{
+            user_prod_selection[14] = 0;
+            console.log("Selected Element# (0)-Peixe");
+        };
+        //16th Product
+        if(document.getElementById("sixteenth_item_user_select").checked === true){
+            user_prod_selection[15] = 1;
+            
+             // To Store selected products' quantities:
+            user_prod_quantity[15] = document.getElementById('sixteenth_item_quantity').value;
+            
+            //To Store selected products' prices:
+            user_prod_price[15] = document.getElementById('sixteenth_item_price').value;
+           
+             cba_prod_price_string[15]= document.getElementById('pUN_cba_16').value;
+            
+            //To store CBA's product price:
+            //CBA product price
+            //Convert the string into a number
+            //1- Find the index of the occurrence of:"Kz(
+            var lastid15 = (document.getElementById('pUN_cba_16').value).indexOf("Kz(");
+            //2- Slice the string before the occurrence of the mask("Kz(")
+           // if(lastid>=0)
+            //{
+                var sliced15=(document.getElementById('pUN_cba_16').value).slice(0,lastid15);
+                cba_prod_price_number[15] = Number(sliced15);
+                //document.getElementById('pGain_cba_01').innerHTML = cba_prod_price_number[0];
+            //}else{
+              //  cba_prod_price_number[0] = Number(document.getElementById('cba_prod_value').value);
+            //}
+            
+           
+            //To determine user product value:
+            user_prod_value[15]=(user_prod_quantity[15]*user_prod_price[15]);
+            document.getElementById('pTotal_16').value = user_prod_value[15];
+            
+            //To determine the CBA product value:
+            cba_prod_value[15] = user_prod_quantity[15] * cba_prod_price_number[15];
+            document.getElementById('pTotal_cba_16').value = cba_prod_value[15];
+            
+            //To determine the CBA product GAIN:
+           cba_prod_gain[15] = user_prod_value[15]-cba_prod_value[15];
+           document.getElementById('pGain_cba_16').value = cba_prod_gain[15];
+
+            
+            console.log("Selected Element# (1)-Carne Seca");
+        }else{
+            user_prod_selection[15] = 0;
+            console.log("Selected Element# (0)-Carne Seca");
+        };
+        //17th Product
+        if(document.getElementById("seventeenth_item_user_select").checked === true){
+            user_prod_selection[16] = 1;
+            
+             // To Store selected products' quantities:
+            user_prod_quantity[16] = document.getElementById('seventeenth_item_quantity').value;
+            
+            //To Store selected products' prices:
+            user_prod_price[16] = document.getElementById('seventeeth_item_price').value;
+           
+             cba_prod_price_string[16]= document.getElementById('pUN_cba_17').value;
+            
+            //To store CBA's product price:
+            //CBA product price
+            //Convert the string into a number
+            //1- Find the index of the occurrence of:"Kz(
+            var lastid16 = (document.getElementById('pUN_cba_17').value).indexOf("Kz(");
+            //2- Slice the string before the occurrence of the mask("Kz(")
+           // if(lastid>=0)
+            //{
+                var sliced16=(document.getElementById('pUN_cba_17').value).slice(0,lastid16);
+                cba_prod_price_number[16] = Number(sliced16);
+                //document.getElementById('pGain_cba_01').innerHTML = cba_prod_price_number[0];
+            //}else{
+              //  cba_prod_price_number[0] = Number(document.getElementById('cba_prod_value').value);
+            //}
+            
+           
+            //To determine user product value:
+            user_prod_value[16]=(user_prod_quantity[16]*user_prod_price[16]);
+            document.getElementById('pTotal_17').value = user_prod_value[16];
+            
+            //To determine the CBA product value:
+            cba_prod_value[16] = user_prod_quantity[16] * cba_prod_price_number[16];
+            document.getElementById('pTotal_cba_17').value = cba_prod_value[16];
+            
+            //To determine the CBA product GAIN:
+           cba_prod_gain[16] = user_prod_value[16]-cba_prod_value[16];
+           document.getElementById('pGain_cba_17').value = cba_prod_gain[16];
+
+            
+            console.log("Selected Element# (1)-Fuba de Milho");
+        }else{
+            user_prod_selection[16] = 0;
+            console.log("Selected Element# (0)-Fuba de Milho");
+        };
+        //18th Product
+        if(document.getElementById("eighteenth_item_user_select").checked === true){
+            user_prod_selection[17] = 1;
+            
+             // To Store selected products' quantities:
+            user_prod_quantity[17] = document.getElementById('eighteenth_item_quantity').value;
+            
+            //To Store selected products' prices:
+            user_prod_price[17] = document.getElementById('eighteenth_item_price').value;
+           
+             cba_prod_price_string[17]= document.getElementById('pUN_cba_18').value;
+            
+            //To store CBA's product price:
+            //CBA product price
+            //Convert the string into a number
+            //1- Find the index of the occurrence of:"Kz(
+            var lastid17 = (document.getElementById('pUN_cba_18').value).indexOf("Kz(");
+            //2- Slice the string before the occurrence of the mask("Kz(")
+           // if(lastid>=0)
+            //{
+                var sliced17=(document.getElementById('pUN_cba_18').value).slice(0,lastid17);
+                cba_prod_price_number[17] = Number(sliced17);
+                //document.getElementById('pGain_cba_01').innerHTML = cba_prod_price_number[0];
+            //}else{
+              //  cba_prod_price_number[0] = Number(document.getElementById('cba_prod_value').value);
+            //}
+            
+           
+            //To determine user product value:
+            user_prod_value[17]=(user_prod_quantity[17]*user_prod_price[17]);
+            document.getElementById('pTotal_18').value = user_prod_value[17];
+            
+            //To determine the CBA product value:
+            cba_prod_value[17] = user_prod_quantity[17] * cba_prod_price_number[17];
+            document.getElementById('pTotal_cba_18').value = cba_prod_value[17];
+            
+            //To determine the CBA product GAIN:
+           cba_prod_gain[17] = user_prod_value[17]-cba_prod_value[17];
+           document.getElementById('pGain_cba_18').value = cba_prod_gain[17];
+
+            
+            console.log("Selected Element# (1)-Fuba de Mandioca");
+        }else{
+            user_prod_selection[17] = 0;
+            console.log("Selected Element# (0)-Fuba de Mandioca");
+        };
+        //19th Product
+        if(document.getElementById("nineteenth_item_user_select").checked === true){
+            user_prod_selection[18] = 1;
+            
+             // To Store selected products' quantities:
+            user_prod_quantity[18] = document.getElementById('nineteenth_item_quantity').value;
+            
+            //To Store selected products' prices:
+            user_prod_price[18] = document.getElementById('nineteenth_item_price').value;
+           
+             cba_prod_price_string[18]= document.getElementById('pUN_cba_19').value;
+            
+            //To store CBA's product price:
+            //CBA product price
+            //Convert the string into a number
+            //1- Find the index of the occurrence of:"Kz(
+            var lastid18 = (document.getElementById('pUN_cba_19').value).indexOf("Kz(");
+            //2- Slice the string before the occurrence of the mask("Kz(")
+           // if(lastid>=0)
+            //{
+                var sliced18=(document.getElementById('pUN_cba_19').value).slice(0,lastid18);
+                cba_prod_price_number[18] = Number(sliced18);
+                //document.getElementById('pGain_cba_01').innerHTML = cba_prod_price_number[0];
+            //}else{
+              //  cba_prod_price_number[0] = Number(document.getElementById('cba_prod_value').value);
+            //}
+            
+           
+            //To determine user product value:
+            user_prod_value[18]=(user_prod_quantity[18]*user_prod_price[18]);
+            document.getElementById('pTotal_19').value = user_prod_value[18];
+            
+            //To determine the CBA product value:
+            cba_prod_value[18] = user_prod_quantity[18] * cba_prod_price_number[18];
+            document.getElementById('pTotal_cba_19').value = cba_prod_value[18];
+            
+            //To determine the CBA product GAIN:
+           cba_prod_gain[18] = user_prod_value[18]-cba_prod_value[18];
+           document.getElementById('pGain_cba_19').value = cba_prod_gain[18];
+
+            
+            console.log("Selected Element# (1)-Pasta Dentrífica");
+        }else{
+            user_prod_selection[18] = 0;
+            console.log("Selected Element# (0)-Pasta Dentrífica");
+        };
+        //20th Product
+        if(document.getElementById("twentieth_item_user_select").checked === true){
+            user_prod_selection[19] = 1;
+            
+             // To Store selected products' quantities:
+            user_prod_quantity[19] = document.getElementById('twentieth_item_quantity').value;
+            
+            //To Store selected products' prices:
+            user_prod_price[19] = document.getElementById('twentieth_item_price').value;
+           
+             cba_prod_price_string[19]= document.getElementById('pUN_cba_20').value;
+            
+            //To store CBA's product price:
+            //CBA product price
+            //Convert the string into a number
+            //1- Find the index of the occurrence of:"Kz(
+            var lastid19 = (document.getElementById('pUN_cba_20').value).indexOf("Kz(");
+            //2- Slice the string before the occurrence of the mask("Kz(")
+           // if(lastid>=0)
+            //{
+                var sliced19=(document.getElementById('pUN_cba_20').value).slice(0,lastid19);
+                cba_prod_price_number[19] = Number(sliced19);
+                //document.getElementById('pGain_cba_01').innerHTML = cba_prod_price_number[0];
+            //}else{
+              //  cba_prod_price_number[0] = Number(document.getElementById('cba_prod_value').value);
+            //}
+            
+           
+            //To determine user product value:
+            user_prod_value[19]=(user_prod_quantity[19]*user_prod_price[19]);
+            document.getElementById('pTotal_20').value = user_prod_value[19];
+            
+            //To determine the CBA product value:
+            cba_prod_value[19] = user_prod_quantity[19] * cba_prod_price_number[19];
+            document.getElementById('pTotal_cba_20').value = cba_prod_value[19];
+            
+            //To determine the CBA product GAIN:
+           cba_prod_gain[19] = user_prod_value[19]-cba_prod_value[19];
+           document.getElementById('pGain_cba_20').value = cba_prod_gain[19];
+           if(!cba_prod_gain[19]){
+               document.getElementById('pGain_cba_20').style.backgroundColor = "green";
+           }else{
+               document.getElementById('pGain_cba_20').style.backgroundColor = "red";
+           }
+
+            
+            
+            console.log("Selected Element# (1)-Sabao em Barra");
+        }else{
+            user_prod_selection[19] = 0;
+            console.log("Selected Element# (0)-Sabao em Barra");
+        };
+        
+        //To Store CBA Total Gain value:
+        document.getElementById("Total_Gain").value = cba_prod_gain.reduce(getSum);
+        if(!(document.getElementById("Total_Gain").value)){
+               document.getElementById('Total_Gain').style.backgroundColor = "green";
+           }else{
+               document.getElementById('Total_Gain').style.backgroundColor = "red";
+           }
+
+        
+        
+        //Do User products' purchase calculation value (UPCV)
+        //From the first product on the list until the last product on the list, DO:
+            //UPCV(i) = user_prod_selection(i) x user_prod_quantity(i) x user_prod_price(i)
+        //Store each partial value:
+        //var user_prod_calc_value = new Array(0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,
+        //                                    0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0);
+        
+        
+        //Do CBA products' purchase calculation value (CBA_PCV
+        //From the first product on the list until the last product on the list, DO:
+            //UPCV(i) = user_prod_selection(i) x user_prod_quantity(i) x user_prod_price(i)
+        //Store each partial value:
+        /*var user_prod_calc_value = new Array(0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,
+                                            0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0);
         */
-        // Add Click events to buttons.
-        //this.addMessageButton.addEventListener('click', this.addMessage.bind(this));
-        // Listen for auth state changes.
-        //firebase.auth().onAuthStateChanged(this.onAuthStateChanged.bind(this));
+        //Determine User purchase gain(PG): PG = UPCV - CBA_PCV
+        //Update the corresponding product values
         
-        window.open("404.html", _self, "", true);
+        //Display purchase gain to the user
+        
+        //window.open("404.html", _self, "", true);
     //}
     
     // Adds two numbers by calling the `addNumbers` server-side function.

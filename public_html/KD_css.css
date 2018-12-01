@@ -7,7 +7,11 @@ and open the template in the editor.
     Created on : 12/jun/2018, 9:01:05
     Author     : hp
 */
-
+/*div#main{
+    position: fixed;
+    top: 0;
+    left: 0;
+}*/
 
     #first, #second, #third, #fourth, #fifth, #sixth, #seventh, #eighth, #nineth, #tenth
     , #eleventh, #twelveth, #thirteenth, #fourteenth, #fifteenth, #sixteenth
@@ -65,9 +69,6 @@ and open the template in the editor.
     }
     
     /* Main file (index.html) Footer CSS */
-    body{
-        background-image: url("Tab_1.png");
-    }
     ul {
         list-style-type: none;
         margin: 0;
